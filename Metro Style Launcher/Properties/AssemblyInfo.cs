@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Metro Style Launcher")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This is a External Launcher For Starting Up CS.  It's Custom Made For CS:SME, CS:BTE, CS:BTE-RSJ, CS:BTE-Banana Or More Version")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("NekoMeow")]
 [assembly: AssemblyProduct("Metro Style Launcher")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright ©  2019 NekoMeow. All Rights Reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

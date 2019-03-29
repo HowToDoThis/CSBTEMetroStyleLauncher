@@ -6,14 +6,21 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MetroFramework;
+using MetroFramework.Forms;
 
-namespace Metro_Style_Launcher
+namespace MetroStyleLauncher
 {
-    public partial class Main : Form
+    public partial class Main : MetroForm
     {
         public Main()
         {
             InitializeComponent();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

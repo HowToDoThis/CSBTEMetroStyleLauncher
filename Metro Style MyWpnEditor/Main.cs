@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Metro_Style_MyWpnEditor
+namespace MetroStyleMyWpnEditor
 {
     public partial class Main : Form
     {

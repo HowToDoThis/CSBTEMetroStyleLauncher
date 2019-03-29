@@ -595,7 +595,9 @@ namespace MetroFramework.Controls
 
                 using (StringFormat sf = new StringFormat())
                 {
+#pragma warning disable CS0219 // Variable is assigned but its value is never used
                     TextFormatFlags flags = TextFormatFlags.Left;
+#pragma warning restore CS0219 // Variable is assigned but its value is never used
 
                     switch (e.Header.TextAlign)
                     {
@@ -820,7 +822,9 @@ public class ListViewColumnSorter : IComparer
     private CaseInsensitiveComparer ObjectCompare;
 
     private SortModifiers mySortModifier = SortModifiers.SortByText;
+#pragma warning disable CS3008 // Identifier is not CLS-compliant
     public SortModifiers _SortModifier
+#pragma warning restore CS3008 // Identifier is not CLS-compliant
     {
         set
         {
