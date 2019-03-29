@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("INIParser")]
 [assembly: AssemblyDescription("A simple INI file processing library")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Modified By NekoMeow")]
 [assembly: AssemblyProduct("INIParser")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCopyright("Modified By NekoMeow")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -30,5 +30,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("2.5.2")]
-[assembly: AssemblyFileVersion("2.5.2")]
+[assembly: AssemblyVersion("2.5.2.1")]
+[assembly: AssemblyFileVersion("2.5.2.1")]

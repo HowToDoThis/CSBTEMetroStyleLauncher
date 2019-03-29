@@ -41,16 +41,16 @@ using System.Security;
 
 [assembly:AllowPartiallyTrustedCallers]
 
-[assembly: InternalsVisibleTo(MetroFramework.AssemblyRef.MetroFrameworkDesignIVT)]
-[assembly: InternalsVisibleTo(MetroFramework.AssemblyRef.MetroFrameworkFontsIVT)]
+[assembly: InternalsVisibleTo(MetroFramework.AssemblyRef.MetroFrameworkDesign_)]
+[assembly: InternalsVisibleTo(MetroFramework.AssemblyRef.MetroFrameworkFonts_)]
 
 internal static class MetroFrameworkAssembly
 {
     internal const string Title = "MetroFramework.dll";
-    internal const string Version = "1.4.0.0";
+    internal const string Version = "1.4.1";
     internal const string Description = "Metro UI Framework for .NET WinForms";
-    internal const string Copyright = "Copyright \x00a9 2011 Sven Walter, Dennis Magno.  All rights reserved.";
-    internal const string Company = "Sven Walter, Dennis Magno";
+    internal const string Copyright = "Copyright \x00a9 2011 Sven Walter, Dennis Magno. Modified By NekoMeow.  All rights reserved.";
+    internal const string Company = "Sven Walter, Dennis Magno. Modified By NekoMeow";
     internal const string Product = "MetroFramework";
 }
 

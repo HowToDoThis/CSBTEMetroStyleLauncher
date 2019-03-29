@@ -9,7 +9,7 @@ namespace IniParser.Model
     /// </summary>
     public class KeyDataCollection : ICloneable, IEnumerable<KeyData>
     {
-        IEqualityComparer<string> _searchComparer;
+        readonly IEqualityComparer<string> _searchComparer;
         #region Initialization
 
         /// <summary>

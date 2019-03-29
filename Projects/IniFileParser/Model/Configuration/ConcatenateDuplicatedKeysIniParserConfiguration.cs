@@ -6,15 +6,17 @@ namespace IniParser.Model.Configuration
 {
     public class ConcatenateDuplicatedKeysIniParserConfiguration : IniParserConfiguration
     {
-        public new bool AllowDuplicateKeys { get {return true; }}
+        private string _concatenateSeparator;
+
+        public new bool AllowDuplicateKeys { get { return true; } }
         public ConcatenateDuplicatedKeysIniParserConfiguration()
-            :base()
+            : base()
         {
             this.ConcatenateSeparator = ";";
         }
 
         public ConcatenateDuplicatedKeysIniParserConfiguration(ConcatenateDuplicatedKeysIniParserConfiguration ori)
-            :base(ori)
+            : base(ori)
         {
             this.ConcatenateSeparator = ori.ConcatenateSeparator;
         }
@@ -24,7 +26,7 @@ namespace IniParser.Model.Configuration
         /// </summary>
         ///     Defaults to ';'.
         /// </value>
-        public string ConcatenateSeparator { get; set; }
+        public string ConcatenateSeparator { get => _concatenateSeparator; set => _concatenateSeparator = value; }
     }
 
 }
