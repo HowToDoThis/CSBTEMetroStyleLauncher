@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1647423F-7BBF-462E-81FE-639BE3E26B8B}</ProjectGuid>
+    <ProjectGuid>{4367C4D1-6172-4B26-92F3-4EF58018DD1A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Metro_Style_Launcher</RootNamespace>
-    <AssemblyName>Metro Style Launcher</AssemblyName>
+    <RootNamespace>Metro_Style_MyWpnEditor</RootNamespace>
+    <AssemblyName>Metro Style MyWpnEditor</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -64,9 +64,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

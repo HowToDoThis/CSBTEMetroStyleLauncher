@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Metro_Style_Launcher
+namespace Metro_Style_MyWpnEditor
 {
     static class Program
     {
