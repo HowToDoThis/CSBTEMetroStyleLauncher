@@ -83,7 +83,7 @@ namespace IniParser
             }
             catch (IOException ex)
             {
-                throw new ParsingException(String.Format("Could not parse file {0}", filePath), ex);
+                throw new ParsingException(String.Format("Parsing File {0} Failed", filePath), ex);
             }
 
         }

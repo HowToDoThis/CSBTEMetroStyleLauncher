@@ -113,7 +113,7 @@ namespace IniParser.Parser
                     }
                     catch (Exception ex)
                     {
-                        var errorEx = new ParsingException(ex.Message, lineNumber+1, line, ex);
+                        var errorEx = new ParsingException(ex.Message, lineNumber + 1, line, ex);
                         if (Configuration.ThrowExceptionsOnError) 
                         {
                             throw errorEx;
@@ -283,8 +283,7 @@ namespace IniParser.Parser
             if (Configuration.SkipInvalidLines)
                 return;
 
-            throw new ParsingException(
-                "Unknown file format. Couldn't parse the line: '" + currentLine + "'.");
+            throw new ParsingException("Unknown file format. Failed To Parse: '" + currentLine + "'.");
         }
 
         /// <summary>
@@ -351,7 +350,7 @@ namespace IniParser.Parser
             {
                 if (!Configuration.AllowKeysWithoutSection)
                 {
-                    throw new ParsingException("key value pairs must be enclosed in a section");
+                    throw new ParsingException("Key value pairs must be enclosed in a section");
                 }
 
                 AddKeyToKeyValueCollection(key, value, currentIniData.Global, "global");
