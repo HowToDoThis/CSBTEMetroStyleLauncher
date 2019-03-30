@@ -11,14 +11,14 @@ using MetroFramework.Forms;
 
 namespace MetroStyleLauncher
 {
-    public partial class Main : MetroForm
+    public partial class Form1 : MetroForm
     {
-        public Main()
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

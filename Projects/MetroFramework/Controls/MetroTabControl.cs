@@ -48,41 +48,39 @@ using MetroFramework.Controls;
 
 namespace MetroFramework.Controls
 {
-    #region MetroTabPageCollection
-
-    [ToolboxItem(false)]
-    [Editor("MetroFramework.Design.MetroTabPageCollectionEditor, " + AssemblyRef.MetroFrameworkDesignSN, typeof(UITypeEditor))]
-    public class MetroTabPageCollection : TabControl.TabPageCollection
-    {
-        public MetroTabPageCollection(MetroTabControl owner)
-            : base(owner)
-        { }
-    }
-
-    #endregion
-
-    #region HiddenTabClass
-    public class HiddenTabs
-    {
-        public HiddenTabs(int id, string page)
-        {
-            _index = id;
-            _tabpage = page;
-        }
-
-        private int _index;
-        private string _tabpage;
-
-        public int index { get { return _index; } }
-
-        public string tabpage { get { return _tabpage; } }
-    }
-    #endregion HiddenTabClass
-
     [Designer("MetroFramework.Design.Controls.MetroTabControlDesigner, " + AssemblyRef.MetroFrameworkDesignSN)]
     [ToolboxBitmap(typeof(TabControl))]
     public class MetroTabControl : TabControl, IMetroControl
     {
+        #region MetroTabPageCollection
+        [ToolboxItem(false)]
+        [Editor("MetroFramework.Design.MetroTabPageCollectionEditor, " + AssemblyRef.MetroFrameworkDesignSN, typeof(UITypeEditor))]
+        public class MetroTabPageCollection : TabControl.TabPageCollection
+        {
+            public MetroTabPageCollection(MetroTabControl owner)
+                : base(owner)
+            { }
+        }
+        #endregion
+
+        #region HiddenTabClass
+        public class HiddenTabs
+        {
+            public HiddenTabs(int id, string page)
+            {
+                _index = id;
+                _tabpage = page;
+            }
+
+            private int _index;
+            private string _tabpage;
+
+            public int index { get { return _index; } }
+
+            public string tabpage { get { return _tabpage; } }
+        }
+        #endregion HiddenTabClass
+
         #region Interface
         [Category(MetroDefaults.PropertyCategory.Appearance)]
         public event EventHandler<MetroPaintEventArgs> CustomPaintBackground;
@@ -736,7 +734,7 @@ namespace MetroFramework.Controls
         public void ShowTab(MetroTabPage tabpage)
         {
             HiddenTabs result = hidTabs.Find(
-                 delegate(HiddenTabs bk)
+                 delegate (HiddenTabs bk)
                  {
                      return bk.tabpage == tabpage.Name;
                  }
@@ -744,7 +742,7 @@ namespace MetroFramework.Controls
 
             if (result != null)
             {
-                this.TabPages.Insert(result.index,tabpage);
+                this.TabPages.Insert(result.index, tabpage);
                 hidTabs.Remove(result);
             }
         }
@@ -764,7 +762,7 @@ namespace MetroFramework.Controls
                     { SelectedIndex = 0; }
                     else { SelectedIndex++; }
                 }
-              
+
                 int _tabid = this.TabPages.IndexOf(tabpage);
 
                 tabDisable.Add(tabpage.Name);
@@ -811,7 +809,7 @@ namespace MetroFramework.Controls
         public bool IsTabHidden(MetroTabPage tabpage)
         {
             HiddenTabs result = hidTabs.Find(
-                delegate(HiddenTabs bk)
+                delegate (HiddenTabs bk)
                 {
                     return bk.tabpage == tabpage.Name;
                 }
@@ -820,5 +818,10 @@ namespace MetroFramework.Controls
             return (result != null);
         }
         #endregion
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+        }
     }
 }

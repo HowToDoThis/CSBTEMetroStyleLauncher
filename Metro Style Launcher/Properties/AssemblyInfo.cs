@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Metro Style Launcher")]
-[assembly: AssemblyDescription("This is a External Launcher For Starting Up CS.  It's Custom Made For CS:SME, CS:BTE, CS:BTE-RSJ, CS:BTE-Banana Or More Version")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NekoMeow")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Metro Style Launcher")]
-[assembly: AssemblyCopyright("Copyright ©  2019 NekoMeow. All Rights Reserved.")]
+[assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1647423f-7bbf-462e-81fe-639be3e26b8b")]
+[assembly: Guid("504a21c9-462e-4892-a4c6-f1e8669c620b")]
 
 // Version information for an assembly consists of the following four values:
 //
