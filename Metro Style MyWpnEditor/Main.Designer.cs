@@ -29,7 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.SuspendLayout();
+            // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.Padding = new System.Drawing.Point(6, 8);
+            this.metroTabControl1.TabIndex = 0;
+            this.metroTabControl1.UseSelectable = true;
             // 
             // Main
             // 
@@ -44,6 +53,8 @@
         }
 
         #endregion
+
+        private MetroFramework.Controls.MetroTabControl metroTabControl1;
     }
 }
 

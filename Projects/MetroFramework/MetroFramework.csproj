@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MetroFramework</RootNamespace>
     <AssemblyName>MetroFramework</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>../MetroFramework.snk</AssemblyOriginatorKeyFile>
@@ -99,9 +99,26 @@
     <Compile Include="Components\MetroStyleManager.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\MetroStyleManagerDesigner.cs" />
     <Compile Include="Components\MetroToolTip.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\Design\MetroButtonDesigner.cs" />
+    <Compile Include="Controls\Design\MetroCheckBoxDesigner.cs" />
+    <Compile Include="Controls\Design\MetroDropDownButtonDesigner.cs" />
+    <Compile Include="Controls\Design\MetroLabelDesigner.cs" />
+    <Compile Include="Controls\Design\MetroLinkDesigner.cs" />
+    <Compile Include="Controls\Design\MetroPanelDesigner.cs" />
+    <Compile Include="Controls\Design\MetroProgressBarDesigner.cs" />
+    <Compile Include="Controls\Design\MetroProgressSpinnerDesigner.cs" />
+    <Compile Include="Controls\Design\MetroRadioButtonDesigner.cs" />
+    <Compile Include="Controls\Design\MetroScrollBarDesigner.cs" />
+    <Compile Include="Controls\Design\MetroTabControlDesigner.cs" />
+    <Compile Include="Controls\Design\MetroTabPageCollectionEditor.cs" />
+    <Compile Include="Controls\Design\MetroTabPageDesigner.cs" />
+    <Compile Include="Controls\Design\MetroTextBoxDesigner.cs" />
+    <Compile Include="Controls\Design\MetroTileDesigner.cs" />
+    <Compile Include="Controls\Design\MetroToggleDesigner.cs" />
     <Compile Include="Controls\MetroButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -202,6 +219,7 @@
     <Compile Include="Drawing\Html\Parser.cs" />
     <Compile Include="Drawing\MetroBackBuffer.cs" />
     <Compile Include="Drawing\MetroPaint.cs" />
+    <Compile Include="FontResolver.cs" />
     <Compile Include="Forms\MetroForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +269,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <EmbeddedResource Include="Resources\Open_Sans.ttf" />
+    <EmbeddedResource Include="Resources\Open_Sans_Bold.ttf" />
+    <EmbeddedResource Include="Resources\Open_Sans_Light.ttf" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -283,6 +304,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Localization\en\MetroToggle.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open Sans License.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
