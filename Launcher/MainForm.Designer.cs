@@ -47,6 +47,7 @@
             this.PageMap = new MetroFramework.Controls.MetroTabPage();
             this.PanelMaps = new MetroFramework.Controls.MetroPanel();
             this.PageBot = new MetroFramework.Controls.MetroTabPage();
+            this.PanelBotDifficulty = new MetroFramework.Controls.MetroPanel();
             this.BotSYPB = new MetroFramework.Controls.MetroCheckBox();
             this.TitleControl = new MetroFramework.Controls.MetroLabel();
             this.BotZ = new MetroFramework.Controls.MetroCheckBox();
@@ -54,23 +55,26 @@
             this.TitleDifficulty = new MetroFramework.Controls.MetroLabel();
             this.TitleNumber = new MetroFramework.Controls.MetroLabel();
             this.PageVideo = new MetroFramework.Controls.MetroTabPage();
+            this.PanelAF = new MetroFramework.Controls.MetroPanel();
             this.VideoAF8 = new MetroFramework.Controls.MetroRadioButton();
-            this.VideoAFOff = new MetroFramework.Controls.MetroRadioButton();
-            this.VideoAF2 = new MetroFramework.Controls.MetroRadioButton();
-            this.VideoAF4 = new MetroFramework.Controls.MetroRadioButton();
             this.VideoAF6 = new MetroFramework.Controls.MetroRadioButton();
-            this.TitleAF = new MetroFramework.Controls.MetroLabel();
-            this.VideoAAOff = new MetroFramework.Controls.MetroRadioButton();
-            this.VideoMSAA2 = new MetroFramework.Controls.MetroRadioButton();
-            this.VideoMSAA4 = new MetroFramework.Controls.MetroRadioButton();
+            this.VideoAF4 = new MetroFramework.Controls.MetroRadioButton();
+            this.VideoAF2 = new MetroFramework.Controls.MetroRadioButton();
+            this.VideoAFOff = new MetroFramework.Controls.MetroRadioButton();
+            this.PanelDisplayMode = new MetroFramework.Controls.MetroPanel();
+            this.VideoFullScreen = new MetroFramework.Controls.MetroRadioButton();
+            this.VideoWindowed = new MetroFramework.Controls.MetroRadioButton();
+            this.VideoWindowedBorderless = new MetroFramework.Controls.MetroRadioButton();
+            this.PanelAA = new MetroFramework.Controls.MetroPanel();
             this.VideoMSAA8 = new MetroFramework.Controls.MetroRadioButton();
+            this.VideoMSAA4 = new MetroFramework.Controls.MetroRadioButton();
+            this.VideoMSAA2 = new MetroFramework.Controls.MetroRadioButton();
+            this.VideoAAOff = new MetroFramework.Controls.MetroRadioButton();
+            this.TitleAF = new MetroFramework.Controls.MetroLabel();
             this.TitleAA = new MetroFramework.Controls.MetroLabel();
             this.VideoVSync = new MetroFramework.Controls.MetroCheckBox();
             this.VideoHDR = new MetroFramework.Controls.MetroCheckBox();
             this.TitleAdvance = new MetroFramework.Controls.MetroLabel();
-            this.VideoWindowedBorderless = new MetroFramework.Controls.MetroRadioButton();
-            this.VideoWindowed = new MetroFramework.Controls.MetroRadioButton();
-            this.VideoFullScreen = new MetroFramework.Controls.MetroRadioButton();
             this.TitleDisplay = new MetroFramework.Controls.MetroLabel();
             this.VideoY = new MetroFramework.Controls.MetroTextBox();
             this.MultiplySymbol = new MetroFramework.Controls.MetroLabel();
@@ -89,20 +93,16 @@
             this.AboutIni = new MetroFramework.Controls.MetroLabel();
             this.AboutMetro = new MetroFramework.Controls.MetroLabel();
             this.AboutThanks = new MetroFramework.Controls.MetroLabel();
-            this.PanelAA = new MetroFramework.Controls.MetroPanel();
-            this.PanelDisplayMode = new MetroFramework.Controls.MetroPanel();
-            this.PanelAF = new MetroFramework.Controls.MetroPanel();
-            this.PanelBotDifficulty = new MetroFramework.Controls.MetroPanel();
             this.TabControl.SuspendLayout();
             this.PageHome.SuspendLayout();
             this.PageMap.SuspendLayout();
             this.PageBot.SuspendLayout();
             this.PageVideo.SuspendLayout();
+            this.PanelAF.SuspendLayout();
+            this.PanelDisplayMode.SuspendLayout();
+            this.PanelAA.SuspendLayout();
             this.PageOther.SuspendLayout();
             this.PageAbout.SuspendLayout();
-            this.PanelAA.SuspendLayout();
-            this.PanelDisplayMode.SuspendLayout();
-            this.PanelAF.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControl
@@ -115,7 +115,7 @@
             this.TabControl.Controls.Add(this.PageAbout);
             resources.ApplyResources(this.TabControl, "TabControl");
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 5;
+            this.TabControl.SelectedIndex = 0;
             this.TabControl.UseSelectable = true;
             // 
             // PageHome
@@ -170,14 +170,16 @@
             // 
             // PanelModes
             // 
+            resources.ApplyResources(this.PanelModes, "PanelModes");
+            this.PanelModes.HorizontalScrollbar = true;
             this.PanelModes.HorizontalScrollbarBarColor = true;
             this.PanelModes.HorizontalScrollbarHighlightOnWheel = false;
-            this.PanelModes.HorizontalScrollbarSize = 10;
-            resources.ApplyResources(this.PanelModes, "PanelModes");
+            this.PanelModes.HorizontalScrollbarSize = 5;
             this.PanelModes.Name = "PanelModes";
+            this.PanelModes.VerticalScrollbar = true;
             this.PanelModes.VerticalScrollbarBarColor = true;
             this.PanelModes.VerticalScrollbarHighlightOnWheel = false;
-            this.PanelModes.VerticalScrollbarSize = 10;
+            this.PanelModes.VerticalScrollbarSize = 5;
             // 
             // LaunchGame
             // 
@@ -208,12 +210,14 @@
             resources.ApplyResources(this.HomeBot, "HomeBot");
             this.HomeBot.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.HomeBot.Name = "HomeBot";
+            this.HomeBot.Click += new System.EventHandler(this.HomeBot_Click);
             // 
             // HomeMap
             // 
             resources.ApplyResources(this.HomeMap, "HomeMap");
             this.HomeMap.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.HomeMap.Name = "HomeMap";
+            this.HomeMap.Click += new System.EventHandler(this.HomeMap_Click);
             // 
             // HomeMode
             // 
@@ -282,6 +286,17 @@
             this.PageBot.VerticalScrollbarBarColor = true;
             this.PageBot.VerticalScrollbarHighlightOnWheel = false;
             this.PageBot.VerticalScrollbarSize = 10;
+            // 
+            // PanelBotDifficulty
+            // 
+            this.PanelBotDifficulty.HorizontalScrollbarBarColor = true;
+            this.PanelBotDifficulty.HorizontalScrollbarHighlightOnWheel = false;
+            this.PanelBotDifficulty.HorizontalScrollbarSize = 10;
+            resources.ApplyResources(this.PanelBotDifficulty, "PanelBotDifficulty");
+            this.PanelBotDifficulty.Name = "PanelBotDifficulty";
+            this.PanelBotDifficulty.VerticalScrollbarBarColor = true;
+            this.PanelBotDifficulty.VerticalScrollbarHighlightOnWheel = false;
+            this.PanelBotDifficulty.VerticalScrollbarSize = 10;
             // 
             // BotSYPB
             // 
@@ -372,33 +387,28 @@
             this.PageVideo.VerticalScrollbarHighlightOnWheel = false;
             this.PageVideo.VerticalScrollbarSize = 10;
             // 
+            // PanelAF
+            // 
+            this.PanelAF.Controls.Add(this.VideoAF8);
+            this.PanelAF.Controls.Add(this.VideoAF6);
+            this.PanelAF.Controls.Add(this.VideoAF4);
+            this.PanelAF.Controls.Add(this.VideoAF2);
+            this.PanelAF.Controls.Add(this.VideoAFOff);
+            this.PanelAF.HorizontalScrollbarBarColor = true;
+            this.PanelAF.HorizontalScrollbarHighlightOnWheel = false;
+            this.PanelAF.HorizontalScrollbarSize = 10;
+            resources.ApplyResources(this.PanelAF, "PanelAF");
+            this.PanelAF.Name = "PanelAF";
+            this.PanelAF.VerticalScrollbarBarColor = true;
+            this.PanelAF.VerticalScrollbarHighlightOnWheel = false;
+            this.PanelAF.VerticalScrollbarSize = 10;
+            // 
             // VideoAF8
             // 
             resources.ApplyResources(this.VideoAF8, "VideoAF8");
             this.VideoAF8.Name = "VideoAF8";
             this.VideoAF8.UseSelectable = true;
             this.VideoAF8.CheckedChanged += new System.EventHandler(this.VideoAF8_CheckedChanged);
-            // 
-            // VideoAFOff
-            // 
-            resources.ApplyResources(this.VideoAFOff, "VideoAFOff");
-            this.VideoAFOff.Name = "VideoAFOff";
-            this.VideoAFOff.UseSelectable = true;
-            this.VideoAFOff.CheckedChanged += new System.EventHandler(this.VideoAFOff_CheckedChanged);
-            // 
-            // VideoAF2
-            // 
-            resources.ApplyResources(this.VideoAF2, "VideoAF2");
-            this.VideoAF2.Name = "VideoAF2";
-            this.VideoAF2.UseSelectable = true;
-            this.VideoAF2.CheckedChanged += new System.EventHandler(this.VideoAF2_CheckedChanged);
-            // 
-            // VideoAF4
-            // 
-            resources.ApplyResources(this.VideoAF4, "VideoAF4");
-            this.VideoAF4.Name = "VideoAF4";
-            this.VideoAF4.UseSelectable = true;
-            this.VideoAF4.CheckedChanged += new System.EventHandler(this.VideoAF4_CheckedChanged);
             // 
             // VideoAF6
             // 
@@ -407,25 +417,83 @@
             this.VideoAF6.UseSelectable = true;
             this.VideoAF6.CheckedChanged += new System.EventHandler(this.VideoAF6_CheckedChanged);
             // 
-            // TitleAF
+            // VideoAF4
             // 
-            resources.ApplyResources(this.TitleAF, "TitleAF");
-            this.TitleAF.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.TitleAF.Name = "TitleAF";
+            resources.ApplyResources(this.VideoAF4, "VideoAF4");
+            this.VideoAF4.Name = "VideoAF4";
+            this.VideoAF4.UseSelectable = true;
+            this.VideoAF4.CheckedChanged += new System.EventHandler(this.VideoAF4_CheckedChanged);
             // 
-            // VideoAAOff
+            // VideoAF2
             // 
-            resources.ApplyResources(this.VideoAAOff, "VideoAAOff");
-            this.VideoAAOff.Name = "VideoAAOff";
-            this.VideoAAOff.UseSelectable = true;
-            this.VideoAAOff.CheckedChanged += new System.EventHandler(this.VideoAAOff_CheckedChanged);
+            resources.ApplyResources(this.VideoAF2, "VideoAF2");
+            this.VideoAF2.Name = "VideoAF2";
+            this.VideoAF2.UseSelectable = true;
+            this.VideoAF2.CheckedChanged += new System.EventHandler(this.VideoAF2_CheckedChanged);
             // 
-            // VideoMSAA2
+            // VideoAFOff
             // 
-            resources.ApplyResources(this.VideoMSAA2, "VideoMSAA2");
-            this.VideoMSAA2.Name = "VideoMSAA2";
-            this.VideoMSAA2.UseSelectable = true;
-            this.VideoMSAA2.CheckedChanged += new System.EventHandler(this.VideoMSAA2_CheckedChanged);
+            resources.ApplyResources(this.VideoAFOff, "VideoAFOff");
+            this.VideoAFOff.Name = "VideoAFOff";
+            this.VideoAFOff.UseSelectable = true;
+            this.VideoAFOff.CheckedChanged += new System.EventHandler(this.VideoAFOff_CheckedChanged);
+            // 
+            // PanelDisplayMode
+            // 
+            this.PanelDisplayMode.Controls.Add(this.VideoFullScreen);
+            this.PanelDisplayMode.Controls.Add(this.VideoWindowed);
+            this.PanelDisplayMode.Controls.Add(this.VideoWindowedBorderless);
+            this.PanelDisplayMode.HorizontalScrollbarBarColor = true;
+            this.PanelDisplayMode.HorizontalScrollbarHighlightOnWheel = false;
+            this.PanelDisplayMode.HorizontalScrollbarSize = 10;
+            resources.ApplyResources(this.PanelDisplayMode, "PanelDisplayMode");
+            this.PanelDisplayMode.Name = "PanelDisplayMode";
+            this.PanelDisplayMode.VerticalScrollbarBarColor = true;
+            this.PanelDisplayMode.VerticalScrollbarHighlightOnWheel = false;
+            this.PanelDisplayMode.VerticalScrollbarSize = 10;
+            // 
+            // VideoFullScreen
+            // 
+            resources.ApplyResources(this.VideoFullScreen, "VideoFullScreen");
+            this.VideoFullScreen.Name = "VideoFullScreen";
+            this.VideoFullScreen.UseSelectable = true;
+            this.VideoFullScreen.CheckedChanged += new System.EventHandler(this.VideoFullScreen_CheckedChanged);
+            // 
+            // VideoWindowed
+            // 
+            resources.ApplyResources(this.VideoWindowed, "VideoWindowed");
+            this.VideoWindowed.Name = "VideoWindowed";
+            this.VideoWindowed.UseSelectable = true;
+            this.VideoWindowed.CheckedChanged += new System.EventHandler(this.VideoWindowed_CheckedChanged);
+            // 
+            // VideoWindowedBorderless
+            // 
+            resources.ApplyResources(this.VideoWindowedBorderless, "VideoWindowedBorderless");
+            this.VideoWindowedBorderless.Name = "VideoWindowedBorderless";
+            this.VideoWindowedBorderless.UseSelectable = true;
+            this.VideoWindowedBorderless.CheckedChanged += new System.EventHandler(this.VideoWindowedBorderless_CheckedChanged);
+            // 
+            // PanelAA
+            // 
+            this.PanelAA.Controls.Add(this.VideoMSAA8);
+            this.PanelAA.Controls.Add(this.VideoMSAA4);
+            this.PanelAA.Controls.Add(this.VideoMSAA2);
+            this.PanelAA.Controls.Add(this.VideoAAOff);
+            this.PanelAA.HorizontalScrollbarBarColor = true;
+            this.PanelAA.HorizontalScrollbarHighlightOnWheel = false;
+            this.PanelAA.HorizontalScrollbarSize = 10;
+            resources.ApplyResources(this.PanelAA, "PanelAA");
+            this.PanelAA.Name = "PanelAA";
+            this.PanelAA.VerticalScrollbarBarColor = true;
+            this.PanelAA.VerticalScrollbarHighlightOnWheel = false;
+            this.PanelAA.VerticalScrollbarSize = 10;
+            // 
+            // VideoMSAA8
+            // 
+            resources.ApplyResources(this.VideoMSAA8, "VideoMSAA8");
+            this.VideoMSAA8.Name = "VideoMSAA8";
+            this.VideoMSAA8.UseSelectable = true;
+            this.VideoMSAA8.CheckedChanged += new System.EventHandler(this.VideoMSAA8_CheckedChanged);
             // 
             // VideoMSAA4
             // 
@@ -434,12 +502,25 @@
             this.VideoMSAA4.UseSelectable = true;
             this.VideoMSAA4.CheckedChanged += new System.EventHandler(this.VideoMSAA4_CheckedChanged);
             // 
-            // VideoMSAA8
+            // VideoMSAA2
             // 
-            resources.ApplyResources(this.VideoMSAA8, "VideoMSAA8");
-            this.VideoMSAA8.Name = "VideoMSAA8";
-            this.VideoMSAA8.UseSelectable = true;
-            this.VideoMSAA8.CheckedChanged += new System.EventHandler(this.VideoMSAA8_CheckedChanged);
+            resources.ApplyResources(this.VideoMSAA2, "VideoMSAA2");
+            this.VideoMSAA2.Name = "VideoMSAA2";
+            this.VideoMSAA2.UseSelectable = true;
+            this.VideoMSAA2.CheckedChanged += new System.EventHandler(this.VideoMSAA2_CheckedChanged);
+            // 
+            // VideoAAOff
+            // 
+            resources.ApplyResources(this.VideoAAOff, "VideoAAOff");
+            this.VideoAAOff.Name = "VideoAAOff";
+            this.VideoAAOff.UseSelectable = true;
+            this.VideoAAOff.CheckedChanged += new System.EventHandler(this.VideoAAOff_CheckedChanged);
+            // 
+            // TitleAF
+            // 
+            resources.ApplyResources(this.TitleAF, "TitleAF");
+            this.TitleAF.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.TitleAF.Name = "TitleAF";
             // 
             // TitleAA
             // 
@@ -465,27 +546,6 @@
             this.TitleAdvance.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.TitleAdvance.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.TitleAdvance.Name = "TitleAdvance";
-            // 
-            // VideoWindowedBorderless
-            // 
-            resources.ApplyResources(this.VideoWindowedBorderless, "VideoWindowedBorderless");
-            this.VideoWindowedBorderless.Name = "VideoWindowedBorderless";
-            this.VideoWindowedBorderless.UseSelectable = true;
-            this.VideoWindowedBorderless.CheckedChanged += new System.EventHandler(this.VideoWindowedBorderless_CheckedChanged);
-            // 
-            // VideoWindowed
-            // 
-            resources.ApplyResources(this.VideoWindowed, "VideoWindowed");
-            this.VideoWindowed.Name = "VideoWindowed";
-            this.VideoWindowed.UseSelectable = true;
-            this.VideoWindowed.CheckedChanged += new System.EventHandler(this.VideoWindowed_CheckedChanged);
-            // 
-            // VideoFullScreen
-            // 
-            resources.ApplyResources(this.VideoFullScreen, "VideoFullScreen");
-            this.VideoFullScreen.Name = "VideoFullScreen";
-            this.VideoFullScreen.UseSelectable = true;
-            this.VideoFullScreen.CheckedChanged += new System.EventHandler(this.VideoFullScreen_CheckedChanged);
             // 
             // TitleDisplay
             // 
@@ -677,62 +737,6 @@
             this.AboutThanks.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.AboutThanks.Name = "AboutThanks";
             // 
-            // PanelAA
-            // 
-            this.PanelAA.Controls.Add(this.VideoMSAA8);
-            this.PanelAA.Controls.Add(this.VideoMSAA4);
-            this.PanelAA.Controls.Add(this.VideoMSAA2);
-            this.PanelAA.Controls.Add(this.VideoAAOff);
-            this.PanelAA.HorizontalScrollbarBarColor = true;
-            this.PanelAA.HorizontalScrollbarHighlightOnWheel = false;
-            this.PanelAA.HorizontalScrollbarSize = 10;
-            resources.ApplyResources(this.PanelAA, "PanelAA");
-            this.PanelAA.Name = "PanelAA";
-            this.PanelAA.VerticalScrollbarBarColor = true;
-            this.PanelAA.VerticalScrollbarHighlightOnWheel = false;
-            this.PanelAA.VerticalScrollbarSize = 10;
-            // 
-            // PanelDisplayMode
-            // 
-            this.PanelDisplayMode.Controls.Add(this.VideoFullScreen);
-            this.PanelDisplayMode.Controls.Add(this.VideoWindowed);
-            this.PanelDisplayMode.Controls.Add(this.VideoWindowedBorderless);
-            this.PanelDisplayMode.HorizontalScrollbarBarColor = true;
-            this.PanelDisplayMode.HorizontalScrollbarHighlightOnWheel = false;
-            this.PanelDisplayMode.HorizontalScrollbarSize = 10;
-            resources.ApplyResources(this.PanelDisplayMode, "PanelDisplayMode");
-            this.PanelDisplayMode.Name = "PanelDisplayMode";
-            this.PanelDisplayMode.VerticalScrollbarBarColor = true;
-            this.PanelDisplayMode.VerticalScrollbarHighlightOnWheel = false;
-            this.PanelDisplayMode.VerticalScrollbarSize = 10;
-            // 
-            // PanelAF
-            // 
-            this.PanelAF.Controls.Add(this.VideoAF8);
-            this.PanelAF.Controls.Add(this.VideoAF6);
-            this.PanelAF.Controls.Add(this.VideoAF4);
-            this.PanelAF.Controls.Add(this.VideoAF2);
-            this.PanelAF.Controls.Add(this.VideoAFOff);
-            this.PanelAF.HorizontalScrollbarBarColor = true;
-            this.PanelAF.HorizontalScrollbarHighlightOnWheel = false;
-            this.PanelAF.HorizontalScrollbarSize = 10;
-            resources.ApplyResources(this.PanelAF, "PanelAF");
-            this.PanelAF.Name = "PanelAF";
-            this.PanelAF.VerticalScrollbarBarColor = true;
-            this.PanelAF.VerticalScrollbarHighlightOnWheel = false;
-            this.PanelAF.VerticalScrollbarSize = 10;
-            // 
-            // PanelBotDifficulty
-            // 
-            this.PanelBotDifficulty.HorizontalScrollbarBarColor = true;
-            this.PanelBotDifficulty.HorizontalScrollbarHighlightOnWheel = false;
-            this.PanelBotDifficulty.HorizontalScrollbarSize = 10;
-            resources.ApplyResources(this.PanelBotDifficulty, "PanelBotDifficulty");
-            this.PanelBotDifficulty.Name = "PanelBotDifficulty";
-            this.PanelBotDifficulty.VerticalScrollbarBarColor = true;
-            this.PanelBotDifficulty.VerticalScrollbarHighlightOnWheel = false;
-            this.PanelBotDifficulty.VerticalScrollbarSize = 10;
-            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -751,16 +755,16 @@
             this.PageBot.PerformLayout();
             this.PageVideo.ResumeLayout(false);
             this.PageVideo.PerformLayout();
+            this.PanelAF.ResumeLayout(false);
+            this.PanelAF.PerformLayout();
+            this.PanelDisplayMode.ResumeLayout(false);
+            this.PanelDisplayMode.PerformLayout();
+            this.PanelAA.ResumeLayout(false);
+            this.PanelAA.PerformLayout();
             this.PageOther.ResumeLayout(false);
             this.PageOther.PerformLayout();
             this.PageAbout.ResumeLayout(false);
             this.PageAbout.PerformLayout();
-            this.PanelAA.ResumeLayout(false);
-            this.PanelAA.PerformLayout();
-            this.PanelDisplayMode.ResumeLayout(false);
-            this.PanelDisplayMode.PerformLayout();
-            this.PanelAF.ResumeLayout(false);
-            this.PanelAF.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -770,7 +774,6 @@
         private MetroFramework.Controls.MetroTabControl TabControl;
         private MetroFramework.Controls.MetroTabPage PageHome;
         private MetroFramework.Controls.MetroTabPage PageMap;
-        private MetroFramework.Controls.MetroTabControl metroTabControl2;
         private MetroFramework.Controls.MetroLabel HomeBot;
         private MetroFramework.Controls.MetroLabel HomeMap;
         private MetroFramework.Controls.MetroLabel HomeMode;
@@ -809,9 +812,6 @@
         private MetroFramework.Controls.MetroCheckBox VideoVSync;
         private MetroFramework.Controls.MetroCheckBox VideoHDR;
         private MetroFramework.Controls.MetroLabel TitleAdvance;
-        private MetroFramework.Controls.MetroRadioButton VideoWindowedBorderless;
-        private MetroFramework.Controls.MetroRadioButton VideoWindowed;
-        private MetroFramework.Controls.MetroRadioButton VideoFullScreen;
         private MetroFramework.Controls.MetroLabel TitleDisplay;
         private MetroFramework.Controls.MetroTextBox VideoY;
         private MetroFramework.Controls.MetroLabel MultiplySymbol;
@@ -832,6 +832,9 @@
         private MetroFramework.Controls.MetroPanel PanelDisplayMode;
         private MetroFramework.Controls.MetroPanel PanelAA;
         private MetroFramework.Controls.MetroPanel PanelBotDifficulty;
+        private MetroFramework.Controls.MetroRadioButton VideoFullScreen;
+        private MetroFramework.Controls.MetroRadioButton VideoWindowed;
+        private MetroFramework.Controls.MetroRadioButton VideoWindowedBorderless;
     }
 }
 

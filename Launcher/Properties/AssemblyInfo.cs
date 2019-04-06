@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Launcher")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("MetroStyleLauncher")]
+[assembly: AssemblyDescription("This is a External Launcher For Starting Up CS.  It's Custom Made For CS:SME, CS:BTE, CS:BTE-RSJ, CS:BTE-Banana Or More Version")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Launcher")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCompany("NekoMeow")]
+[assembly: AssemblyProduct("MetroStyleLauncher")]
+[assembly: AssemblyCopyright("Copyright ©  2019 Neko Meow. All Rights Reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

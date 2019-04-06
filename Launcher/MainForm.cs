@@ -37,7 +37,6 @@ namespace Launcher
         {
             LauncherSettings = LauncherSettingsManager.Instance;
             InitializeComponent();
-            localizedGamePath = gameLanguage == "english" ? "cstrike" : "cstrike_" + gameLanguage;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -45,6 +44,36 @@ namespace Launcher
             ReadReg();
             LoadSettings();
             Initialize();
+            BlackMagic();
+        }
+
+        private void BlackMagic()
+        {
+            // Some Test Function //
+            if (File.Exists("WeaponEditor.exe"))
+            {
+                NewEditor.Checked = true;
+            }
+            else
+            {
+                NewEditor.Visible = false;
+                OldEditor.CheckState = CheckState.Indeterminate;
+            }
+
+            // Sypb and Zbot
+            string value = ";win32 addons/sypb/dlls/sypb.dll";
+            using (StreamReader streamReader = new StreamReader("cstrike\\addons\\metamod\\plugins.ini"))
+            {
+                while (!streamReader.EndOfStream)
+                {
+                    string text = streamReader.ReadLine();
+                    if (!string.IsNullOrEmpty(text) && text.IndexOf(value, StringComparison.CurrentCultureIgnoreCase) >= 0)
+                    {
+                        BotZ.Checked = true;
+                        BotSYPB.Visible = false;
+                    }
+                }
+            }
         }
 
         public bool IsNumeric(string str)
@@ -78,6 +107,8 @@ namespace Launcher
 
             VideoX.Text = width;
             VideoY.Text = height;
+
+            Setting.DisplayMode = Convert.ToInt32(windowed);
 
             if (width == "0" || height == "0")
             {
@@ -161,6 +192,7 @@ namespace Launcher
 
         private void LoadSettings()
         {
+            localizedGamePath = gameLanguage == "english" ? "cstrike" : "cstrike_" + gameLanguage;
             var LauncherPath = localizedGamePath + @"\launcher.ini";
 
             // First Try
@@ -195,6 +227,30 @@ namespace Launcher
 
             LauncherSettings.LoadMap = Setting.LoadMap;
             LauncherSettings.LastMap = Setting.LastMap;
+
+            switch (Setting.DisplayMode)
+            {
+                case 0: VideoFullScreen.Checked = true; break;
+                case 1: VideoWindowed.Checked = true; break;
+                case 2: VideoWindowedBorderless.Checked = true; break;
+            }
+
+            switch (Setting.AA)
+            {
+                case 0: VideoAAOff.Checked = true; break;
+                case 1: VideoMSAA2.Checked = true; break;
+                case 2: VideoMSAA4.Checked = true; break;
+                case 3: VideoMSAA8.Checked = true; break;
+            }
+
+            switch (Setting.AF)
+            {
+                case 0: VideoAFOff.Checked = true; break;
+                case 1: VideoAF2.Checked = true; break;
+                case 2: VideoAF4.Checked = true; break;
+                case 3: VideoAF6.Checked = true; break;
+                case 4: VideoAF8.Checked = true; break;
+            }
 
             var lastMapLabel = Launcher["Maps"][Setting.LastMap]; lastMapLabel = lastMapLabel == null ? Setting.LastMap : lastMapLabel;
             HomeMap.Text = OtherLoadMap.Checked ? lastMapLabel : MapLoadDisable;
@@ -261,7 +317,10 @@ namespace Launcher
             btnAdd.Text = name;
             btnAdd.Tag = totalModes;
             btnAdd.AutoSize = true;
+            btnAdd.UseCustomBackColor = true;
+            btnAdd.BackColor = Color.White;
             btnAdd.Click += new System.EventHandler(this.ButtonMode_Click);
+            btnAdd.FontWeight = MetroButtonWeight.Regular;
 
             PanelModes.Controls.Add(btnAdd);
             btnAdd.Location = new System.Drawing.Point(PanelModes.Size.Width - btnAdd.Size.Width - 24, totalModes * 38 + 8);
@@ -339,6 +398,9 @@ namespace Launcher
             btnAdd.Text = label;
             btnAdd.Tag = name;
             btnAdd.AutoSize = true;
+            btnAdd.UseCustomBackColor = true;
+            btnAdd.BackColor = Color.White;
+            btnAdd.FontWeight = MetroButtonWeight.Regular;
 
             btnAdd.Click += new System.EventHandler(this.ButtonMap_Click);
 
@@ -387,7 +449,7 @@ namespace Launcher
 
                 radioButtonBotDiff[i].Click += new System.EventHandler(this.buttonBotDiff_Click);
 
-                PanelDisplayMode.Controls.Add(radioButtonBotDiff[i]);
+                PanelBotDifficulty.Controls.Add(radioButtonBotDiff[i]);
             }
 
             ResumeLayout(false);
@@ -552,6 +614,30 @@ namespace Launcher
             Setting.RMA = OtherRMA.Checked;
             Setting.HDR = VideoHDR.Checked;
 
+            switch (Setting.DisplayMode)
+            {
+                case 0: Setting.AA = 0; break;
+                case 1: Setting.AA = 1; break;
+                case 2: Setting.AA = 2; break;
+            }
+
+            switch (Setting.AA)
+            {
+                case 0: Setting.AA = 0; break;
+                case 1: Setting.AA = 1; break;
+                case 2: Setting.AA = 2; break;
+                case 3: Setting.AA = 3; break;
+            }
+
+            switch (Setting.AF)
+            {
+                case 0: Setting.AF = 0; break;
+                case 1: Setting.AF = 1; break;
+                case 2: Setting.AF = 2; break;
+                case 3: Setting.AF = 3; break;
+                case 4: Setting.AF = 4; break;
+            }
+
             parser.WriteFile(@"cstrike\addons\amxmodx\configs\bte_wpn_config.ini", Weapon);
 
             Setting.Save();
@@ -578,6 +664,7 @@ namespace Launcher
             {
                 sw.WriteLine("sypb_quota " + Setting.BotQuota.ToString());
                 sw.WriteLine("sypb_difficulty " + Setting.BotDifficulty.ToString());
+                sw.WriteLine("sypb_lockzbot 1");
             }
 
             sw.Flush();
@@ -736,5 +823,14 @@ namespace Launcher
         }
         #endregion
 
+        private void HomeMap_Click(object sender, EventArgs e)
+        {
+            TabControl.SelectedTab = PageMap;
+        }
+
+        private void HomeBot_Click(object sender, EventArgs e)
+        {
+            TabControl.SelectedTab = PageBot;
+        }
     }
 }
