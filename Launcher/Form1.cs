@@ -10,9 +10,9 @@ using MetroFramework.Forms;
 
 namespace Launcher
 {
-    public partial class Form1 : MetroForm
+    public partial class Main : MetroForm
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
