@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Metro Style Launcher")]
+[assembly: AssemblyTitle("Launcher")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Metro Style Launcher")]
+[assembly: AssemblyProduct("Launcher")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("504a21c9-462e-4892-a4c6-f1e8669c620b")]
+[assembly: Guid("fd78698f-fb9b-45fe-a17e-6540bcef8224")]
 
 // Version information for an assembly consists of the following four values:
 //

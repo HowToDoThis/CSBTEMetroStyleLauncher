@@ -41,7 +41,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\lib\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -150,9 +150,7 @@
     <Compile Include="Controls\MetroScrollBar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\MetroTabControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Controls\MetroTabControl.cs" />
     <Compile Include="Controls\MetroTabPage.cs">
       <SubType>Component</SubType>
     </Compile>

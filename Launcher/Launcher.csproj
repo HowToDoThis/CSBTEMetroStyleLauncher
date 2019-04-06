@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{504A21C9-462E-4892-A4C6-F1E8669C620B}</ProjectGuid>
+    <ProjectGuid>{FD78698F-FB9B-45FE-A17E-6540BCEF8224}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MetroStyleLauncher</RootNamespace>
-    <AssemblyName>Metro Style Launcher</AssemblyName>
+    <RootNamespace>Launcher</RootNamespace>
+    <AssemblyName>Launcher</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -26,7 +26,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\Release\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -35,16 +35,13 @@
     <Reference Include="INIFileParser">
       <HintPath>..\lib\INIFileParser.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MetroFramework">
       <HintPath>..\lib\MetroFramework.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework.Design, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MetroFramework.Design">
       <HintPath>..\lib\MetroFramework.Design.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MetroFramework.Fonts">
       <HintPath>..\lib\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -77,7 +74,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
