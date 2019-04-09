@@ -180,7 +180,7 @@
     <value>0, 8, 0, 8</value>
   </data>
   <data name="materialContextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 176</value>
+    <value>329, 198</value>
   </data>
   <data name="&gt;&gt;materialContextMenuStrip1.Name" xml:space="preserve">
     <value>materialContextMenuStrip1</value>
@@ -307,7 +307,7 @@
     <value>Microsoft YaHei UI, 15pt</value>
   </data>
   <data name="newemptyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 32</value>
+    <value>180, 32</value>
   </data>
   <data name="newemptyToolStripMenuItem.Text" xml:space="preserve">
     <value>New empty profile</value>
@@ -316,7 +316,7 @@
     <value>Microsoft YaHei UI, 15pt</value>
   </data>
   <data name="newfromcurToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 32</value>
+    <value>180, 32</value>
   </data>
   <data name="newfromcurToolStripMenuItem.Text" xml:space="preserve">
     <value>New current copy</value>
@@ -328,7 +328,7 @@
     <value>Microsoft Sans Serif, 15pt</value>
   </data>
   <data name="materialToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 32</value>
+    <value>180, 32</value>
   </data>
   <data name="materialToolStripMenuItem1.Text" xml:space="preserve">
     <value>Default profile</value>
@@ -340,7 +340,7 @@
     <value>Microsoft YaHei UI, 15pt</value>
   </data>
   <data name="materialToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 32</value>
+    <value>180, 32</value>
   </data>
   <data name="materialToolStripMenuItem3.Text" xml:space="preserve">
     <value>Rename</value>
@@ -349,7 +349,7 @@
     <value>Microsoft YaHei UI, 15pt</value>
   </data>
   <data name="materialToolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 32</value>
+    <value>180, 32</value>
   </data>
   <data name="materialToolStripMenuItem4.Text" xml:space="preserve">
     <value>Delete</value>

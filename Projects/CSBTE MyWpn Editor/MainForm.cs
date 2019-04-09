@@ -519,17 +519,6 @@ namespace CSBTE_MyWpnEditor
             formatTotalWeapon();
         }
 
-        private void materialFlatButton1_Click(object sender, EventArgs e)
-        {
-            foreach (WeaponButton btn in buttonWpn)
-            {
-                foreach (string mywpn in myWpn)
-                {
-                    if (mywpn == btn.WeaponRealName)
-                        btn.Checked = true;
-                }
-            }
-        }
 
         private void checkEnableMyWpn()
         {
@@ -653,6 +642,5 @@ namespace CSBTE_MyWpnEditor
             pictureBox1.Dock = DockStyle.None;
             pictureBox1.Visible = false;
         }
-
     }
 }

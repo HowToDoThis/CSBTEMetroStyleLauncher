@@ -26,10 +26,10 @@ namespace IniParser.Exceptions
         public ParsingException(string msg, int lineNumber, string lineValue, Exception innerException)
             : base(
                 string.Format(
-                    "Message : {0}" +
-                    "Parsing Line : {1}" +
-                    "Value : \'{2}\'" +
-                    "IniParser Version : {3}" +
+                    "{0}\n" +
+                    "Parsing Line : {1}\n" +
+                    "Value : \'{2}\'\n" +
+                    "IniParser Version : {3}\n" +
                     "Modified By NekoMeow",
                     // "{0} while parsing line number {1} with value \'{2}\' - IniParser version: {3}", 
                     msg, lineNumber, lineValue, System.Reflection.Assembly.GetExecutingAssembly().GetName().Version),

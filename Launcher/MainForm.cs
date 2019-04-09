@@ -487,7 +487,9 @@ namespace Launcher
         private void botTextRebuild()
         {
             bool enable = BotZ.Checked || BotSYPB.Checked;
-            HomeBot.Text = enable ? HomeBot.Text = BotZ.Checked ? "ZBOT" : BotSYPB.Checked ? "SYPB" : BotDifficulty[Setting.BotDifficulty] + " " + BotQuota.Text + " " : BotNone;
+            HomeBot.Text = BotZ.Checked ? "ZBOT " : BotSYPB.Checked ? "SYPB " : BotNone;
+            HomeBot.Text += BotDifficulty[Setting.BotDifficulty] + " " + BotQuota.Text;
+            //HomeBot.Text = enable ? BotDifficulty[Setting.BotDifficulty] + " " + BotQuota.Text + " " : BotNone;
         }
 
         private void BotZ_CheckedChanged(object sender, EventArgs e)
