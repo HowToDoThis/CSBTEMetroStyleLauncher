@@ -14,6 +14,7 @@ using System.IO;
 using Microsoft.Win32;
 using IniParser.Model.Configuration;
 using IniParser.Parser;
+using System.Diagnostics;
 
 namespace WeaponEditor
 {
@@ -21,7 +22,6 @@ namespace WeaponEditor
     {
         string localizedLauncherPath;
         string curSelectFormat;
-        //string Allow;
 
         private static FileIniDataParser parser = new FileIniDataParser();
         //private static FileIniDataParser parser = new FileIniDataParser(iniDataParser);
@@ -31,15 +31,24 @@ namespace WeaponEditor
         private IniData Launcher;
         private Main aForm = new Main();
 
-        public MainForm(string duplicate, string language)
+        public MainForm()
         {
-            InitializeComponent();
+            string duplicate = "AllowDuplicate";
+            string[] args = Environment.GetCommandLineArgs();
+            string language = RegistryHelper.GetRegKeyValue(Registry.CurrentUser, @"SOFTWARE\Valve\Steam", "Language", "english");
 
-            if (language != "english")
-                localizedLauncherPath = "cstrike_" + language + @"\launcher.ini";
-            else
+            if (language == "english")
                 localizedLauncherPath = @"cstrike\launcher.ini";
+            else
+                localizedLauncherPath = "cstrike_" + language + @"\launcher.ini";
 
+            if (args.Contains(duplicate))
+            {
+                parser.Parser.Configuration.AllowDuplicateSections = true;
+                parser.Parser.Configuration.AllowDuplicateKeys = true;
+            }
+
+            InitializeComponent();
             LoadSetting();
         }
 
@@ -198,27 +207,28 @@ namespace WeaponEditor
 
         private void intoAdd(string name)
         {
-            //iniClass.curFile = @"cstrike\weapons.ini";
-
-            var canBuyStr = Weapon[name.ToUpper()]["CanBuy"].ToLower();
-            bool canBuy = bool.Parse(canBuyStr);
-
-            if (!canBuy)
-                return;
+            try
+            {
+                if (!bool.Parse(this.Weapon[name.ToUpper()]["CanBuy"].ToLower()))
+                    return;
+            }
+            catch
+            {
+                MetroMessageBox.Show(this, "Weapon Name : " + name.ToUpper() + " Missing CanBuy, Please Fix It.", "Weapon Name : " + name.ToUpper());
+                Close();
+            }
 
             WeaponButton add = new WeaponButton();
 
             add.Location = new Point(24 + 255 * (totalWeapons % 3), 24 + 126 * (totalWeapons / 3));
             add.Name = "btnAdd";
             add.Text = "";
-            //add.FontWeightMedium = true;
             add.Size = new Size(235, 102);
             add.AutoSize = false;
             add.WeaponName = name;
-            add.MouseState = MouseState.HOVER;
 
-            //iniClass.curFile = localizedLauncherIniPath;
-            var weaponLabel = Launcher["Weapons"][name.ToUpper()]; weaponLabel = weaponLabel == null ? name : weaponLabel;
+            var weaponLabel = Launcher["Weapons"][name.ToUpper()];
+            weaponLabel = weaponLabel == null ? name : weaponLabel;
             add.WeaponText = weaponLabel;
 
             add.Click += add_Click;

@@ -10,20 +10,12 @@ namespace WeaponEditor
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main(string[] args)
+        static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            string language = RegistryHelper.GetRegKeyValue(Registry.CurrentUser, @"SOFTWARE\Valve\Steam", "Language", "english");
-            string duplicate = "false";
-
-            if (args.Length > 0)
-                duplicate = args[0];
-            if (args.Length > 1)
-                language = args[1];
-
-            Application.Run(new MainForm(duplicate, language));
+            Application.Run(new MainForm());
         }
     }
 

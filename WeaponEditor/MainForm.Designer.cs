@@ -39,11 +39,13 @@
             // 
             // WeaponsPanel
             // 
+            resources.ApplyResources(this.WeaponsPanel, "WeaponsPanel");
+            this.WeaponsPanel.HorizontalScrollbar = true;
             this.WeaponsPanel.HorizontalScrollbarBarColor = true;
             this.WeaponsPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.WeaponsPanel.HorizontalScrollbarSize = 10;
-            resources.ApplyResources(this.WeaponsPanel, "WeaponsPanel");
             this.WeaponsPanel.Name = "WeaponsPanel";
+            this.WeaponsPanel.VerticalScrollbar = true;
             this.WeaponsPanel.VerticalScrollbarBarColor = true;
             this.WeaponsPanel.VerticalScrollbarHighlightOnWheel = false;
             this.WeaponsPanel.VerticalScrollbarSize = 10;

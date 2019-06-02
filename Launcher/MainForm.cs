@@ -37,6 +37,7 @@ namespace Launcher
         {
             LauncherSettings = LauncherSettingsManager.Instance;
             InitializeComponent();
+            PreBlackMagic();
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -45,6 +46,18 @@ namespace Launcher
             LoadSettings();
             Initialize();
             BlackMagic();
+        }
+
+        private void PreBlackMagic()
+        {
+            string duplicate = "AllowDuplicate";
+            string[] args = Environment.GetCommandLineArgs();
+
+            if (args.Contains(duplicate))
+            {
+                parser.Parser.Configuration.AllowDuplicateSections = true;
+                parser.Parser.Configuration.AllowDuplicateKeys = true;
+            }
         }
 
         private void BlackMagic()
