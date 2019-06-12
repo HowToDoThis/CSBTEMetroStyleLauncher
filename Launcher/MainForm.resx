@@ -473,6 +473,18 @@
   <data name="&gt;&gt;PageHome.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="PanelMaps.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PanelMaps.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="PanelMaps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>743, 319</value>
+  </data>
+  <data name="PanelMaps.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;PanelMaps.Name" xml:space="preserve">
     <value>PanelMaps</value>
   </data>
@@ -511,516 +523,6 @@
   </data>
   <data name="&gt;&gt;PageMap.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;PanelBotDifficulty.Name" xml:space="preserve">
-    <value>PanelBotDifficulty</value>
-  </data>
-  <data name="&gt;&gt;PanelBotDifficulty.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PanelBotDifficulty.Parent" xml:space="preserve">
-    <value>PageBot</value>
-  </data>
-  <data name="&gt;&gt;PanelBotDifficulty.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;BotSYPB.Name" xml:space="preserve">
-    <value>BotSYPB</value>
-  </data>
-  <data name="&gt;&gt;BotSYPB.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;BotSYPB.Parent" xml:space="preserve">
-    <value>PageBot</value>
-  </data>
-  <data name="&gt;&gt;BotSYPB.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;TitleControl.Name" xml:space="preserve">
-    <value>TitleControl</value>
-  </data>
-  <data name="&gt;&gt;TitleControl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;TitleControl.Parent" xml:space="preserve">
-    <value>PageBot</value>
-  </data>
-  <data name="&gt;&gt;TitleControl.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;BotZ.Name" xml:space="preserve">
-    <value>BotZ</value>
-  </data>
-  <data name="&gt;&gt;BotZ.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;BotZ.Parent" xml:space="preserve">
-    <value>PageBot</value>
-  </data>
-  <data name="&gt;&gt;BotZ.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;BotQuota.Name" xml:space="preserve">
-    <value>BotQuota</value>
-  </data>
-  <data name="&gt;&gt;BotQuota.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;BotQuota.Parent" xml:space="preserve">
-    <value>PageBot</value>
-  </data>
-  <data name="&gt;&gt;BotQuota.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;TitleDifficulty.Name" xml:space="preserve">
-    <value>TitleDifficulty</value>
-  </data>
-  <data name="&gt;&gt;TitleDifficulty.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;TitleDifficulty.Parent" xml:space="preserve">
-    <value>PageBot</value>
-  </data>
-  <data name="&gt;&gt;TitleDifficulty.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;TitleNumber.Name" xml:space="preserve">
-    <value>TitleNumber</value>
-  </data>
-  <data name="&gt;&gt;TitleNumber.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;TitleNumber.Parent" xml:space="preserve">
-    <value>PageBot</value>
-  </data>
-  <data name="&gt;&gt;TitleNumber.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="PageBot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 38</value>
-  </data>
-  <data name="PageBot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>746, 322</value>
-  </data>
-  <data name="PageBot.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="PageBot.Text" xml:space="preserve">
-    <value>Bot</value>
-  </data>
-  <data name="&gt;&gt;PageBot.Name" xml:space="preserve">
-    <value>PageBot</value>
-  </data>
-  <data name="&gt;&gt;PageBot.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PageBot.Parent" xml:space="preserve">
-    <value>TabControl</value>
-  </data>
-  <data name="&gt;&gt;PageBot.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;PanelAF.Name" xml:space="preserve">
-    <value>PanelAF</value>
-  </data>
-  <data name="&gt;&gt;PanelAF.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PanelAF.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;PanelAF.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;PanelDisplayMode.Name" xml:space="preserve">
-    <value>PanelDisplayMode</value>
-  </data>
-  <data name="&gt;&gt;PanelDisplayMode.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PanelDisplayMode.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;PanelDisplayMode.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;PanelAA.Name" xml:space="preserve">
-    <value>PanelAA</value>
-  </data>
-  <data name="&gt;&gt;PanelAA.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PanelAA.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;PanelAA.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;TitleAF.Name" xml:space="preserve">
-    <value>TitleAF</value>
-  </data>
-  <data name="&gt;&gt;TitleAF.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;TitleAF.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;TitleAF.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;TitleAA.Name" xml:space="preserve">
-    <value>TitleAA</value>
-  </data>
-  <data name="&gt;&gt;TitleAA.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;TitleAA.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;TitleAA.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;VideoVSync.Name" xml:space="preserve">
-    <value>VideoVSync</value>
-  </data>
-  <data name="&gt;&gt;VideoVSync.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;VideoVSync.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;VideoVSync.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;VideoHDR.Name" xml:space="preserve">
-    <value>VideoHDR</value>
-  </data>
-  <data name="&gt;&gt;VideoHDR.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;VideoHDR.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;VideoHDR.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;TitleAdvance.Name" xml:space="preserve">
-    <value>TitleAdvance</value>
-  </data>
-  <data name="&gt;&gt;TitleAdvance.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;TitleAdvance.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;TitleAdvance.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;TitleDisplay.Name" xml:space="preserve">
-    <value>TitleDisplay</value>
-  </data>
-  <data name="&gt;&gt;TitleDisplay.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;TitleDisplay.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;TitleDisplay.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;VideoY.Name" xml:space="preserve">
-    <value>VideoY</value>
-  </data>
-  <data name="&gt;&gt;VideoY.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;VideoY.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;VideoY.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;MultiplySymbol.Name" xml:space="preserve">
-    <value>MultiplySymbol</value>
-  </data>
-  <data name="&gt;&gt;MultiplySymbol.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;MultiplySymbol.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;MultiplySymbol.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;VideoX.Name" xml:space="preserve">
-    <value>VideoX</value>
-  </data>
-  <data name="&gt;&gt;VideoX.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;VideoX.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;VideoX.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;TitleResolution.Name" xml:space="preserve">
-    <value>TitleResolution</value>
-  </data>
-  <data name="&gt;&gt;TitleResolution.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;TitleResolution.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;TitleResolution.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="PageVideo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 38</value>
-  </data>
-  <data name="PageVideo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>746, 322</value>
-  </data>
-  <data name="PageVideo.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="PageVideo.Text" xml:space="preserve">
-    <value>Video</value>
-  </data>
-  <data name="&gt;&gt;PageVideo.Name" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;PageVideo.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PageVideo.Parent" xml:space="preserve">
-    <value>TabControl</value>
-  </data>
-  <data name="&gt;&gt;PageVideo.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;OtherDeleteMDMP.Name" xml:space="preserve">
-    <value>OtherDeleteMDMP</value>
-  </data>
-  <data name="&gt;&gt;OtherDeleteMDMP.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;OtherDeleteMDMP.Parent" xml:space="preserve">
-    <value>PageOther</value>
-  </data>
-  <data name="&gt;&gt;OtherDeleteMDMP.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;OtherRMA.Name" xml:space="preserve">
-    <value>OtherRMA</value>
-  </data>
-  <data name="&gt;&gt;OtherRMA.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;OtherRMA.Parent" xml:space="preserve">
-    <value>PageOther</value>
-  </data>
-  <data name="&gt;&gt;OtherRMA.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;OtherLoadMap.Name" xml:space="preserve">
-    <value>OtherLoadMap</value>
-  </data>
-  <data name="&gt;&gt;OtherLoadMap.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroCheckBox, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;OtherLoadMap.Parent" xml:space="preserve">
-    <value>PageOther</value>
-  </data>
-  <data name="&gt;&gt;OtherLoadMap.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="PageOther.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 38</value>
-  </data>
-  <data name="PageOther.Size" type="System.Drawing.Size, System.Drawing">
-    <value>746, 322</value>
-  </data>
-  <data name="PageOther.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="PageOther.Text" xml:space="preserve">
-    <value>Other</value>
-  </data>
-  <data name="&gt;&gt;PageOther.Name" xml:space="preserve">
-    <value>PageOther</value>
-  </data>
-  <data name="&gt;&gt;PageOther.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PageOther.Parent" xml:space="preserve">
-    <value>TabControl</value>
-  </data>
-  <data name="&gt;&gt;PageOther.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;AboutCopyright.Name" xml:space="preserve">
-    <value>AboutCopyright</value>
-  </data>
-  <data name="&gt;&gt;AboutCopyright.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;AboutCopyright.Parent" xml:space="preserve">
-    <value>PageAbout</value>
-  </data>
-  <data name="&gt;&gt;AboutCopyright.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;AboutIniLink.Name" xml:space="preserve">
-    <value>AboutIniLink</value>
-  </data>
-  <data name="&gt;&gt;AboutIniLink.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;AboutIniLink.Parent" xml:space="preserve">
-    <value>PageAbout</value>
-  </data>
-  <data name="&gt;&gt;AboutIniLink.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;AboutMetroLink.Name" xml:space="preserve">
-    <value>AboutMetroLink</value>
-  </data>
-  <data name="&gt;&gt;AboutMetroLink.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;AboutMetroLink.Parent" xml:space="preserve">
-    <value>PageAbout</value>
-  </data>
-  <data name="&gt;&gt;AboutMetroLink.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;AboutNekoMeow.Name" xml:space="preserve">
-    <value>AboutNekoMeow</value>
-  </data>
-  <data name="&gt;&gt;AboutNekoMeow.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;AboutNekoMeow.Parent" xml:space="preserve">
-    <value>PageAbout</value>
-  </data>
-  <data name="&gt;&gt;AboutNekoMeow.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;AboutNN.Name" xml:space="preserve">
-    <value>AboutNN</value>
-  </data>
-  <data name="&gt;&gt;AboutNN.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;AboutNN.Parent" xml:space="preserve">
-    <value>PageAbout</value>
-  </data>
-  <data name="&gt;&gt;AboutNN.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;AboutIni.Name" xml:space="preserve">
-    <value>AboutIni</value>
-  </data>
-  <data name="&gt;&gt;AboutIni.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;AboutIni.Parent" xml:space="preserve">
-    <value>PageAbout</value>
-  </data>
-  <data name="&gt;&gt;AboutIni.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;AboutMetro.Name" xml:space="preserve">
-    <value>AboutMetro</value>
-  </data>
-  <data name="&gt;&gt;AboutMetro.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;AboutMetro.Parent" xml:space="preserve">
-    <value>PageAbout</value>
-  </data>
-  <data name="&gt;&gt;AboutMetro.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;AboutThanks.Name" xml:space="preserve">
-    <value>AboutThanks</value>
-  </data>
-  <data name="&gt;&gt;AboutThanks.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;AboutThanks.Parent" xml:space="preserve">
-    <value>PageAbout</value>
-  </data>
-  <data name="&gt;&gt;AboutThanks.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="PageAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 38</value>
-  </data>
-  <data name="PageAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>746, 322</value>
-  </data>
-  <data name="PageAbout.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="PageAbout.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="&gt;&gt;PageAbout.Name" xml:space="preserve">
-    <value>PageAbout</value>
-  </data>
-  <data name="&gt;&gt;PageAbout.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PageAbout.Parent" xml:space="preserve">
-    <value>TabControl</value>
-  </data>
-  <data name="&gt;&gt;PageAbout.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="TabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 63</value>
-  </data>
-  <data name="TabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>754, 364</value>
-  </data>
-  <data name="TabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabControl.Name" xml:space="preserve">
-    <value>TabControl</value>
-  </data>
-  <data name="&gt;&gt;TabControl.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabControl, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;TabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TabControl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PanelMaps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="PanelMaps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>743, 319</value>
-  </data>
-  <data name="PanelMaps.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;PanelMaps.Name" xml:space="preserve">
-    <value>PanelMaps</value>
-  </data>
-  <data name="&gt;&gt;PanelMaps.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PanelMaps.Parent" xml:space="preserve">
-    <value>PageMap</value>
-  </data>
-  <data name="&gt;&gt;PanelMaps.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="PanelBotDifficulty.Location" type="System.Drawing.Point, System.Drawing">
     <value>135, 55</value>
@@ -1104,7 +606,7 @@
     <value>135, 206</value>
   </data>
   <data name="BotZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 15</value>
+    <value>51, 15</value>
   </data>
   <data name="BotZ.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1218,85 +720,28 @@
   <data name="&gt;&gt;TitleNumber.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;VideoAF8.Name" xml:space="preserve">
-    <value>VideoAF8</value>
+  <data name="PageBot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 38</value>
   </data>
-  <data name="&gt;&gt;VideoAF8.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="PageBot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>746, 322</value>
   </data>
-  <data name="&gt;&gt;VideoAF8.Parent" xml:space="preserve">
-    <value>PanelAF</value>
-  </data>
-  <data name="&gt;&gt;VideoAF8.ZOrder" xml:space="preserve">
+  <data name="PageBot.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;VideoAF6.Name" xml:space="preserve">
-    <value>VideoAF6</value>
+  <data name="PageBot.Text" xml:space="preserve">
+    <value>Bot</value>
   </data>
-  <data name="&gt;&gt;VideoAF6.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="&gt;&gt;PageBot.Name" xml:space="preserve">
+    <value>PageBot</value>
   </data>
-  <data name="&gt;&gt;VideoAF6.Parent" xml:space="preserve">
-    <value>PanelAF</value>
+  <data name="&gt;&gt;PageBot.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="&gt;&gt;VideoAF6.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;PageBot.Parent" xml:space="preserve">
+    <value>TabControl</value>
   </data>
-  <data name="&gt;&gt;VideoAF4.Name" xml:space="preserve">
-    <value>VideoAF4</value>
-  </data>
-  <data name="&gt;&gt;VideoAF4.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;VideoAF4.Parent" xml:space="preserve">
-    <value>PanelAF</value>
-  </data>
-  <data name="&gt;&gt;VideoAF4.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;VideoAF2.Name" xml:space="preserve">
-    <value>VideoAF2</value>
-  </data>
-  <data name="&gt;&gt;VideoAF2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;VideoAF2.Parent" xml:space="preserve">
-    <value>PanelAF</value>
-  </data>
-  <data name="&gt;&gt;VideoAF2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;VideoAFOff.Name" xml:space="preserve">
-    <value>VideoAFOff</value>
-  </data>
-  <data name="&gt;&gt;VideoAFOff.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;VideoAFOff.Parent" xml:space="preserve">
-    <value>PanelAF</value>
-  </data>
-  <data name="&gt;&gt;VideoAFOff.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="PanelAF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>660, 200</value>
-  </data>
-  <data name="PanelAF.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 123</value>
-  </data>
-  <data name="PanelAF.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;PanelAF.Name" xml:space="preserve">
-    <value>PanelAF</value>
-  </data>
-  <data name="&gt;&gt;PanelAF.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;PanelAF.Parent" xml:space="preserve">
-    <value>PageVideo</value>
-  </data>
-  <data name="&gt;&gt;PanelAF.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PageBot.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="VideoAF8.AutoSize" type="System.Boolean, mscorlib">
@@ -1434,62 +879,26 @@
   <data name="&gt;&gt;VideoAFOff.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;VideoFullScreen.Name" xml:space="preserve">
-    <value>VideoFullScreen</value>
+  <data name="PanelAF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>660, 200</value>
   </data>
-  <data name="&gt;&gt;VideoFullScreen.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="PanelAF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 123</value>
   </data>
-  <data name="&gt;&gt;VideoFullScreen.Parent" xml:space="preserve">
-    <value>PanelDisplayMode</value>
-  </data>
-  <data name="&gt;&gt;VideoFullScreen.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;VideoWindowed.Name" xml:space="preserve">
-    <value>VideoWindowed</value>
-  </data>
-  <data name="&gt;&gt;VideoWindowed.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;VideoWindowed.Parent" xml:space="preserve">
-    <value>PanelDisplayMode</value>
-  </data>
-  <data name="&gt;&gt;VideoWindowed.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;VideoWindowedBorderless.Name" xml:space="preserve">
-    <value>VideoWindowedBorderless</value>
-  </data>
-  <data name="&gt;&gt;VideoWindowedBorderless.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;VideoWindowedBorderless.Parent" xml:space="preserve">
-    <value>PanelDisplayMode</value>
-  </data>
-  <data name="&gt;&gt;VideoWindowedBorderless.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="PanelDisplayMode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 65</value>
-  </data>
-  <data name="PanelDisplayMode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 77</value>
-  </data>
-  <data name="PanelDisplayMode.TabIndex" type="System.Int32, mscorlib">
+  <data name="PanelAF.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="&gt;&gt;PanelDisplayMode.Name" xml:space="preserve">
-    <value>PanelDisplayMode</value>
+  <data name="&gt;&gt;PanelAF.Name" xml:space="preserve">
+    <value>PanelAF</value>
   </data>
-  <data name="&gt;&gt;PanelDisplayMode.Type" xml:space="preserve">
+  <data name="&gt;&gt;PanelAF.Type" xml:space="preserve">
     <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="&gt;&gt;PanelDisplayMode.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PanelAF.Parent" xml:space="preserve">
     <value>PageVideo</value>
   </data>
-  <data name="&gt;&gt;PanelDisplayMode.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;PanelAF.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="VideoFullScreen.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1572,74 +981,26 @@
   <data name="&gt;&gt;VideoWindowedBorderless.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;VideoMSAA8.Name" xml:space="preserve">
-    <value>VideoMSAA8</value>
+  <data name="PanelDisplayMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 65</value>
   </data>
-  <data name="&gt;&gt;VideoMSAA8.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="PanelDisplayMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 77</value>
   </data>
-  <data name="&gt;&gt;VideoMSAA8.Parent" xml:space="preserve">
-    <value>PanelAA</value>
+  <data name="PanelDisplayMode.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
   </data>
-  <data name="&gt;&gt;VideoMSAA8.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;PanelDisplayMode.Name" xml:space="preserve">
+    <value>PanelDisplayMode</value>
   </data>
-  <data name="&gt;&gt;VideoMSAA4.Name" xml:space="preserve">
-    <value>VideoMSAA4</value>
-  </data>
-  <data name="&gt;&gt;VideoMSAA4.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;VideoMSAA4.Parent" xml:space="preserve">
-    <value>PanelAA</value>
-  </data>
-  <data name="&gt;&gt;VideoMSAA4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;VideoMSAA2.Name" xml:space="preserve">
-    <value>VideoMSAA2</value>
-  </data>
-  <data name="&gt;&gt;VideoMSAA2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;VideoMSAA2.Parent" xml:space="preserve">
-    <value>PanelAA</value>
-  </data>
-  <data name="&gt;&gt;VideoMSAA2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;VideoAAOff.Name" xml:space="preserve">
-    <value>VideoAAOff</value>
-  </data>
-  <data name="&gt;&gt;VideoAAOff.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;VideoAAOff.Parent" xml:space="preserve">
-    <value>PanelAA</value>
-  </data>
-  <data name="&gt;&gt;VideoAAOff.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="PanelAA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 200</value>
-  </data>
-  <data name="PanelAA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 95</value>
-  </data>
-  <data name="PanelAA.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;PanelAA.Name" xml:space="preserve">
-    <value>PanelAA</value>
-  </data>
-  <data name="&gt;&gt;PanelAA.Type" xml:space="preserve">
+  <data name="&gt;&gt;PanelDisplayMode.Type" xml:space="preserve">
     <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="&gt;&gt;PanelAA.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PanelDisplayMode.Parent" xml:space="preserve">
     <value>PageVideo</value>
   </data>
-  <data name="&gt;&gt;PanelAA.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;PanelDisplayMode.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="VideoMSAA8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1648,7 +1009,7 @@
     <value>3, 3</value>
   </data>
   <data name="VideoMSAA8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 15</value>
+    <value>71, 15</value>
   </data>
   <data name="VideoMSAA8.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -1675,7 +1036,7 @@
     <value>3, 28</value>
   </data>
   <data name="VideoMSAA4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 15</value>
+    <value>71, 15</value>
   </data>
   <data name="VideoMSAA4.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -1702,7 +1063,7 @@
     <value>3, 53</value>
   </data>
   <data name="VideoMSAA2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 15</value>
+    <value>71, 15</value>
   </data>
   <data name="VideoMSAA2.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -1748,6 +1109,27 @@
   </data>
   <data name="&gt;&gt;VideoAAOff.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="PanelAA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 200</value>
+  </data>
+  <data name="PanelAA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 95</value>
+  </data>
+  <data name="PanelAA.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;PanelAA.Name" xml:space="preserve">
+    <value>PanelAA</value>
+  </data>
+  <data name="&gt;&gt;PanelAA.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;PanelAA.Parent" xml:space="preserve">
+    <value>PageVideo</value>
+  </data>
+  <data name="&gt;&gt;PanelAA.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="TitleAF.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2043,6 +1425,30 @@
   <data name="&gt;&gt;TitleResolution.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <data name="PageVideo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 38</value>
+  </data>
+  <data name="PageVideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>746, 322</value>
+  </data>
+  <data name="PageVideo.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="PageVideo.Text" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="&gt;&gt;PageVideo.Name" xml:space="preserve">
+    <value>PageVideo</value>
+  </data>
+  <data name="&gt;&gt;PageVideo.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;PageVideo.Parent" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="&gt;&gt;PageVideo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="OtherDeleteMDMP.Location" type="System.Drawing.Point, System.Drawing">
     <value>623, 279</value>
   </data>
@@ -2119,6 +1525,30 @@
     <value>PageOther</value>
   </data>
   <data name="&gt;&gt;OtherLoadMap.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="PageOther.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 38</value>
+  </data>
+  <data name="PageOther.Size" type="System.Drawing.Size, System.Drawing">
+    <value>746, 322</value>
+  </data>
+  <data name="PageOther.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="PageOther.Text" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="&gt;&gt;PageOther.Name" xml:space="preserve">
+    <value>PageOther</value>
+  </data>
+  <data name="&gt;&gt;PageOther.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;PageOther.Parent" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="&gt;&gt;PageOther.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="AboutCopyright.AutoSize" type="System.Boolean, mscorlib">
@@ -2330,6 +1760,51 @@
   </data>
   <data name="&gt;&gt;AboutThanks.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="PageAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 38</value>
+  </data>
+  <data name="PageAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>746, 322</value>
+  </data>
+  <data name="PageAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="PageAbout.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;PageAbout.Name" xml:space="preserve">
+    <value>PageAbout</value>
+  </data>
+  <data name="&gt;&gt;PageAbout.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;PageAbout.Parent" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="&gt;&gt;PageAbout.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="TabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 63</value>
+  </data>
+  <data name="TabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>754, 364</value>
+  </data>
+  <data name="TabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControl.Name" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="&gt;&gt;TabControl.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabControl, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;TabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TabControl.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

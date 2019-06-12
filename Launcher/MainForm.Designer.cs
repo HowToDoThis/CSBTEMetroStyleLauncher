@@ -260,14 +260,16 @@
             // 
             // PanelMaps
             // 
+            resources.ApplyResources(this.PanelMaps, "PanelMaps");
+            this.PanelMaps.HorizontalScrollbar = true;
             this.PanelMaps.HorizontalScrollbarBarColor = true;
             this.PanelMaps.HorizontalScrollbarHighlightOnWheel = false;
-            this.PanelMaps.HorizontalScrollbarSize = 10;
-            resources.ApplyResources(this.PanelMaps, "PanelMaps");
+            this.PanelMaps.HorizontalScrollbarSize = 5;
             this.PanelMaps.Name = "PanelMaps";
+            this.PanelMaps.VerticalScrollbar = true;
             this.PanelMaps.VerticalScrollbarBarColor = true;
             this.PanelMaps.VerticalScrollbarHighlightOnWheel = false;
-            this.PanelMaps.VerticalScrollbarSize = 10;
+            this.PanelMaps.VerticalScrollbarSize = 5;
             // 
             // PageBot
             // 
