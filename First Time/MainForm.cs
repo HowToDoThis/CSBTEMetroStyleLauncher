@@ -15,7 +15,7 @@ namespace First_Time
 {
     public partial class MainForm : MetroForm
     {
-        int language;
+        private int language;
 
         public MainForm()
         {

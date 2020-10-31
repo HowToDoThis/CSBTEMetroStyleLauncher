@@ -48,16 +48,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Open Sans License.txt" />
-    <EmbeddedResource Include="Resources\Open_Sans_Bold.ttf" />
-    <EmbeddedResource Include="Resources\Open_Sans_Light.ttf" />
-    <EmbeddedResource Include="Resources\Open_Sans.ttf" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\MetroFramework\MetroFramework.csproj">
       <Project>{bb41ac8b-cbed-4387-a7e0-4567edb3f57f}</Project>
       <Name>MetroFramework</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Open_Sans.ttf" />
+    <EmbeddedResource Include="Resources\Open_Sans_Bold.ttf" />
+    <EmbeddedResource Include="Resources\Open_Sans_Light.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Open Sans License.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

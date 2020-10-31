@@ -1,39 +1,34 @@
-﻿using System;
+﻿using IniParser;
+using IniParser.Model;
+using IniParser.Parser;
+using MetroFramework;
+using MetroFramework.Forms;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using MetroFramework;
-using MetroFramework.Forms;
-using IniParser;
-using IniParser.Model;
-using System.IO;
-using Microsoft.Win32;
-using IniParser.Model.Configuration;
-using IniParser.Parser;
-using System.Diagnostics;
 
 namespace WeaponEditor
 {
     public partial class MainForm : MetroForm
     {
-        string localizedLauncherPath;
-        string curSelectFormat;
+        private readonly string localizedLauncherPath;
+        private string curSelectFormat;
 
-        private static FileIniDataParser parser = new FileIniDataParser();
+        private static readonly FileIniDataParser parser = new FileIniDataParser();
         //private static FileIniDataParser parser = new FileIniDataParser(iniDataParser);
-        private static IniDataParser iniDataParser = new IniDataParser();
+        private static readonly IniDataParser iniDataParser = new IniDataParser();
 
         private IniData Weapon;
         private IniData Launcher;
-        private Main aForm = new Main();
+        private readonly Main aForm = new Main();
 
         public MainForm()
         {
-            string duplicate = "AllowDuplicate";
             string[] args = Environment.GetCommandLineArgs();
             string language = RegistryHelper.GetRegKeyValue(Registry.CurrentUser, @"SOFTWARE\Valve\Steam", "Language", "english");
 
@@ -42,7 +37,7 @@ namespace WeaponEditor
             else
                 localizedLauncherPath = "cstrike_" + language + @"\launcher.ini";
 
-            if (args.Contains(duplicate))
+            if (args.Contains("AllowDuplicate"))
             {
                 parser.Parser.Configuration.AllowDuplicateSections = true;
                 parser.Parser.Configuration.AllowDuplicateKeys = true;
@@ -82,8 +77,7 @@ namespace WeaponEditor
             }
 
             sw.Flush();
-            fs.Flush();
-            fs.Close();
+            sw.Close();
         }
 
         // https://stackoverflow.com/questions/3825390/effective-way-to-find-any-files-encoding
@@ -104,20 +98,16 @@ namespace WeaponEditor
                 return Encoding.Default;
         }
 
-        private void MetroMsgBox(string message, string title)
-        {
-            MetroMessageBox.Show(this, message, title, 300);
-        }
-
         private IniData TryCatch(string path)
         {
             try
             {
                 parser.ReadFile(path, GetEncoding(path));
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                MetroMsgBox(e.Message, path);
+                MessageBox.Show(e.Message, path);
+                Environment.Exit(-1);
             }
 
             return parser.ReadFile(path, GetEncoding(path));
@@ -132,21 +122,15 @@ namespace WeaponEditor
                 File.Copy(@"cstrike\addons\amxmodx\configs\weapons_precache.lst", @"cstrike\addons\amxmodx\configs\weapons_precache.default.lst");
         }
 
-        private void formatTotalWeapon()
+        private void FormatTotalWeapon()
         {
-            SeletedAmount.Text = String.Format(curSelectFormat, totalMyWpn);
+            SeletedAmount.Text = string.Format(curSelectFormat, totalMyWpn);
         }
 
         private int totalWeapons;
         private int totalMyWpn;
-
-        List<WeaponButton> buttonWpn = new List<WeaponButton>();
-        List<string> myWpn = new List<string>();
-
-        delegate void Add(string name);
-        //delegate void SetEnableMyWpn();
-        delegate void WpnBteAnim(WeaponButton btn, bool check);
-        delegate void FormatTotalWeapon();
+        private readonly List<WeaponButton> buttonWpn = new List<WeaponButton>();
+        private readonly List<string> myWpn = new List<string>();
 
         private void LoadList(object filename)
         {
@@ -194,7 +178,7 @@ namespace WeaponEditor
                     continue;
 
                 //Add(line);
-                this.BeginInvoke(new Add(intoAdd), line);
+                Add(line);
             }
 
             sr.Close();
@@ -202,14 +186,14 @@ namespace WeaponEditor
             ResumeLayout(false);
 
             totalMyWpn = myWpn.Count;
-            formatTotalWeapon();
+            FormatTotalWeapon();
         }
 
-        private void intoAdd(string name)
+        private void Add(string name)
         {
             try
             {
-                if (!bool.Parse(this.Weapon[name.ToUpper()]["CanBuy"].ToLower()))
+                if (!bool.Parse(Weapon[name.ToUpper()]["CanBuy"].ToLower()))
                     return;
             }
             catch
@@ -218,20 +202,25 @@ namespace WeaponEditor
                 Close();
             }
 
-            WeaponButton add = new WeaponButton();
+            // picture path
+            string img = @"wpnpic\" + name + ".png";
 
-            add.Location = new Point(24 + 255 * (totalWeapons % 3), 24 + 126 * (totalWeapons / 3));
-            add.Name = "btnAdd";
-            add.Text = "";
-            add.Size = new Size(235, 102);
-            add.AutoSize = false;
-            add.WeaponName = name;
+            WeaponButton add = new WeaponButton
+            {
+                Location = new Point(24 + 255 * (totalWeapons % 3), 24 + 126 * (totalWeapons / 3)),
+                Name = "btnAdd",
+                Text = "",
+                Size = new Size(235, 102),
+                AutoSize = false,
+                WeaponName = name,
+                Image = File.Exists(img) ? Image.FromFile(img) : null
+            };
 
             var weaponLabel = Launcher["Weapons"][name.ToUpper()];
-            weaponLabel = weaponLabel == null ? name : weaponLabel;
+            weaponLabel = weaponLabel ?? name;
             add.WeaponText = weaponLabel;
 
-            add.Click += add_Click;
+            add.Click += Add_Click;
 
             foreach (string mywpn in myWpn)
             {
@@ -239,28 +228,18 @@ namespace WeaponEditor
                     add.Checked = true;
             }
 
-            string img = @"wpnpic\" + name + ".png";
-            if (File.Exists(img))
-                add.Image = Image.FromFile(img);
-
             WeaponsPanel.Controls.Add(add);
             buttonWpn.Add(add);
 
             totalWeapons++;
         }
 
-        void add_Click(object sender, EventArgs e)
+        private void Add_Click(object sender, EventArgs e)
         {
             WeaponButton btn = (WeaponButton)sender;
 
             totalMyWpn += btn.Checked ? 1 : -1;
-            formatTotalWeapon();
-        }
-
-        private void wpnBteAnim(WeaponButton btn, bool check)
-        {
-            if (btn.Checked != check)
-                btn.Checked = check;
+            FormatTotalWeapon();
         }
 
         // Other Function
@@ -272,7 +251,7 @@ namespace WeaponEditor
             }
 
             totalMyWpn = 0;
-            formatTotalWeapon();
+            FormatTotalWeapon();
         }
 
         private void ButtonAll_Click(object sender, EventArgs e)
@@ -283,7 +262,7 @@ namespace WeaponEditor
             }
 
             totalMyWpn = 0;
-            formatTotalWeapon();
+            FormatTotalWeapon();
         }
 
         private void ButtonAbout_Click(object sender, EventArgs e)

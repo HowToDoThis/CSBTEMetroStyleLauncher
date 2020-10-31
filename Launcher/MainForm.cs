@@ -19,17 +19,17 @@ namespace Launcher
 {
     public partial class Main : MetroForm
     {
-        private LauncherSettingsManager LauncherSettings;
-        private Setting Setting = new Setting();
+        private readonly LauncherSettingsManager LauncherSettings;
+        private readonly Setting Setting = new Setting();
 
         private string gameLanguage;
         private string localizedGamePath;
 
         private string MapLoadDisable = "Not Load. (Setting in Other > Load Map)";
-        private string[] BotDifficulty = { "Easy", "Medium", "Hard", "Expert", };
+        private readonly string[] BotDifficulty = { "Easy", "Medium", "Hard", "Expert", };
         private string BotNone = "";
 
-        private static FileIniDataParser parser = new FileIniDataParser();
+        private static readonly FileIniDataParser parser = new FileIniDataParser();
         private IniData Launcher;
         private IniData Weapon;
 
@@ -269,7 +269,7 @@ namespace Launcher
             HomeMap.Text = OtherLoadMap.Checked ? lastMapLabel : MapLoadDisable;
 
             Weapon = ReadIniFile(@"cstrike\addons\amxmodx\configs\bte_wpn_config.ini");
-            this.Update();
+            Update();
         }
 
         private void Initialize()
@@ -281,8 +281,8 @@ namespace Launcher
 
         #region GameMode
 
-        int totalModes;
-        GameMode[] gameMode = new GameMode[2333];
+        private int totalModes;
+        private readonly GameMode[] gameMode = new GameMode[2333];
         private void ModeInit()
         {
             totalModes = 0;
@@ -332,7 +332,7 @@ namespace Launcher
             btnAdd.AutoSize = true;
             btnAdd.UseCustomBackColor = true;
             btnAdd.BackColor = Color.White;
-            btnAdd.Click += new System.EventHandler(this.ButtonMode_Click);
+            btnAdd.Click += new System.EventHandler(ButtonMode_Click);
             btnAdd.FontWeight = MetroButtonWeight.Regular;
 
             PanelModes.Controls.Add(btnAdd);
@@ -374,7 +374,7 @@ namespace Launcher
 
         #region Map
 
-        int totalMaps;
+        private int totalMaps;
         private void MapInit()
         {
             totalMaps = 0;
@@ -415,7 +415,7 @@ namespace Launcher
             btnAdd.BackColor = Color.White;
             btnAdd.FontWeight = MetroButtonWeight.Regular;
 
-            btnAdd.Click += new System.EventHandler(this.ButtonMap_Click);
+            btnAdd.Click += new System.EventHandler(ButtonMap_Click);
 
             PanelMaps.Controls.Add(btnAdd);
 
@@ -438,8 +438,8 @@ namespace Launcher
 
         #region Bot
 
-        MetroRadioButton[] radioButtonBotDiff = new MetroRadioButton[4];
-        bool botBtnInit = false;
+        private readonly MetroRadioButton[] radioButtonBotDiff = new MetroRadioButton[4];
+        private bool botBtnInit = false;
         private void BotInit()
         {
             BotZ.Checked = Setting.BotSwitch;
@@ -460,7 +460,7 @@ namespace Launcher
                 if (i == Setting.BotDifficulty)
                     radioButtonBotDiff[i].Checked = true;
 
-                radioButtonBotDiff[i].Click += new System.EventHandler(this.buttonBotDiff_Click);
+                radioButtonBotDiff[i].Click += new System.EventHandler(buttonBotDiff_Click);
 
                 PanelBotDifficulty.Controls.Add(radioButtonBotDiff[i]);
             }
@@ -750,7 +750,7 @@ namespace Launcher
 
         private void OtherLoadMap_CheckedChanged(object sender, EventArgs e)
         {
-            Setting.LoadMap = this.OtherLoadMap.Checked;
+            Setting.LoadMap = OtherLoadMap.Checked;
 
             HomeMap.Text = OtherLoadMap.Checked ? lastMapLabel : MapLoadDisable;
         }

@@ -4,13 +4,13 @@ using System.Windows.Forms;
 
 namespace WeaponEditor
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -27,9 +27,8 @@ namespace WeaponEditor
             {
                 var key = root.OpenSubKey(subkey);
                 if (key == null)
-                {
                     return defaultValue;
-                }
+
                 var value = key.GetValue(name, defaultValue).ToString();
                 key.Close();
 

@@ -14,7 +14,7 @@ namespace MetroFramework.Fonts
         public Font ResolveFont(string familyName, float emSize, FontStyle fontStyle, GraphicsUnit unit)
         {
             Font fontTester = new Font(familyName, emSize, fontStyle, unit);
-            if (fontTester.Name == familyName || !TryResolve(ref familyName, ref fontStyle) )
+            if (fontTester.Name == familyName || !TryResolve(ref familyName, ref fontStyle))
             {
                 return fontTester;
             }
@@ -35,7 +35,7 @@ namespace MetroFramework.Fonts
             if (familyName == "Segoe UI Light")
             {
                 familyName = OPEN_SANS_LIGHT;
-                if( fontStyle != FontStyle.Bold) fontStyle = FontStyle.Regular;
+                if (fontStyle != FontStyle.Bold) fontStyle = FontStyle.Regular;
                 return true;
             }
 

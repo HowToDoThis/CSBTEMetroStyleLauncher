@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MetroFramework;
+using MetroFramework.Controls;
+using MetroFramework.Drawing;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using MetroFramework;
-using MetroFramework.Controls;
 
 namespace WeaponEditor
 {
     public partial class WeaponButton : MetroButton
     {
-        public string WeaponText;
-        public string WeaponName;
+        public string WeaponText { get; set; }
+        public string WeaponName { get; set; }
+
         //public bool Checked;
         private bool check;
         public bool Checked
@@ -45,7 +43,7 @@ namespace WeaponEditor
             check = c;
         }
 
-        private Timer animationTimer = new Timer { Interval = 5, Enabled = false };
+        private readonly Timer animationTimer = new Timer { Interval = 5, Enabled = false };
         private int ticker;
 
         [Browsable(false)]
@@ -73,7 +71,7 @@ namespace WeaponEditor
             };
         }
 
-        protected override void OnPaint(PaintEventArgs e)
+        protected override void OnCustomPaint(MetroPaintEventArgs e)
         {
             var g = e.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
@@ -82,29 +80,24 @@ namespace WeaponEditor
             g.Clear(Parent.BackColor);
 
             if (Image != null)
-                g.DrawImage(Image, 0, 0);
-                //g.DrawImage(Image, 0, 0, Image.Width, Image.Height);
+                g.DrawImage(Image, 0, 0, Image.Width, Image.Height);
 
             double animationProgress = ticker / 10.0;
 
             int alpha = check ? (int)(255.0 * animationProgress) : (255 - (int)(255.0 * animationProgress));
-            var brush = new SolidBrush(Color.FromArgb(alpha, Enabled ? MetroColors.Blue : MetroColors.Blue));
+            var brush = new SolidBrush(Color.FromArgb(alpha, MetroColors.Blue));
 
-            Point point1 = new Point(Width - 46, Height - 32);
-            Point point2 = new Point(Width, Height - 32);
-            Point point3 = new Point(Width, Height);
-            Point point4 = new Point(Width - 32, Height);
-            Point[] curvePoints = { point1, point2, point3, point4 };
+            Point[] points = new Point[]
+            {
+                new Point(0, 0),
+                new Point(0, 24),
+                new Point(24, 0)
+            };
 
-            g.FillPolygon(brush, curvePoints);
-
-            int w = check ? (int)(24 * animationProgress) : (24 - (int)(24 * animationProgress));
-            Rectangle rect = new Rectangle(Width - 30, Height - 28, w, 24);
-
-            g.DrawImageUnscaledAndClipped(DrawCheckMarkBitmap(), rect);
+            g.FillPolygon(brush, points);
 
             Clear = false;
-            base.OnPaint(e);
+            base.OnCustomPaint(e);
             Clear = true;
 
             Font font = MetroFonts.Default(11f);
@@ -117,13 +110,14 @@ namespace WeaponEditor
                 brush2,
                 new RectangleF(4F, Height - stringSize.Height - 4, stringSize.Width, stringSize.Height),
                 new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
-
         }
 
         protected override void OnCreateControl()
         {
             base.OnCreateControl();
-            if (DesignMode) return;
+
+            if (DesignMode)
+                return;
 
             MouseDown += (sender, args) =>
             {
@@ -136,24 +130,6 @@ namespace WeaponEditor
                     Invalidate();
                 }
             };
-        }
-
-        private static readonly Point[] FOLDED_LINE = new Point[]
-        {
-            new Point(0, 12),
-            new Point(12, 0)
-        };
-
-        private Bitmap DrawCheckMarkBitmap()
-        {
-            Bitmap bitmap = new Bitmap(12, 12);
-            Graphics graphics = Graphics.FromImage(bitmap);
-            graphics.Clear(Color.Transparent);
-            using (Pen pen = new Pen(MetroColors.Blue, 3f))
-            {
-                graphics.DrawLines(pen, WeaponButton.FOLDED_LINE);
-            }
-            return bitmap;
         }
     }
 

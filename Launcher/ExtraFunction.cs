@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Launcher
 {
-    class LauncherSettingsManager
+    internal class LauncherSettingsManager
     {
         private static LauncherSettingsManager instance;
 
@@ -68,7 +68,7 @@ namespace Launcher
         }
     }
 
-    class GameMode
+    internal class GameMode
     {
         public string StringEnable;
         public string StringDisable;
