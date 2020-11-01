@@ -34,7 +34,6 @@
             this.ButtonAbout = new MetroFramework.Controls.MetroButton();
             this.ButtonClear = new MetroFramework.Controls.MetroButton();
             this.ButtonAll = new MetroFramework.Controls.MetroButton();
-            this.ButtonReset = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // WeaponsPanel
@@ -82,20 +81,10 @@
             this.ButtonAll.UseSelectable = true;
             this.ButtonAll.Click += new System.EventHandler(this.ButtonAll_Click);
             // 
-            // ButtonReset
-            // 
-            this.ButtonReset.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            resources.ApplyResources(this.ButtonReset, "ButtonReset");
-            this.ButtonReset.Name = "ButtonReset";
-            this.ButtonReset.UseCustomBackColor = true;
-            this.ButtonReset.UseSelectable = true;
-            this.ButtonReset.Click += new System.EventHandler(this.ButtonReset_Click);
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ButtonReset);
             this.Controls.Add(this.ButtonAll);
             this.Controls.Add(this.ButtonClear);
             this.Controls.Add(this.ButtonAbout);
@@ -118,7 +107,6 @@
         private MetroFramework.Controls.MetroButton ButtonAbout;
         private MetroFramework.Controls.MetroButton ButtonClear;
         private MetroFramework.Controls.MetroButton ButtonAll;
-        private MetroFramework.Controls.MetroButton ButtonReset;
     }
 }
 

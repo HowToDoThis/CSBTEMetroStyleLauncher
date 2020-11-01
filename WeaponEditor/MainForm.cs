@@ -136,52 +136,40 @@ namespace WeaponEditor
         {
             totalWeapons = 0;
 
-            StreamReader sr;
-            string line;
-
             // load my wpn
             string fileName = @"cstrike\addons\amxmodx\configs\" + filename.ToString() + ".lst";
             if (File.Exists(fileName))
             {
                 myWpn.Clear();
 
-                sr = new StreamReader(fileName, Encoding.Default);
-
-                while ((line = sr.ReadLine()) != null)
+                var datas = new StreamReader(fileName).ReadToEnd();
+                foreach (var line in datas.Replace("\r", string.Empty).Split('\n'))
                 {
-                    if (line == "")
-                        continue;
-
-                    string head = line.Substring(0, 1);
-
-                    if (head == ";")
-                        continue;
-
-                    myWpn.Add(line);
+                    if (!line.StartsWith("true"))
+                    {
+                        if (!string.IsNullOrEmpty(line))
+                        {
+                            var head = line[0];
+                            if (head != ';')
+                                myWpn.Add(line);
+                        }
+                    }
                 }
-
-                sr.Close();
             }
 
             // load all weapon
             SuspendLayout();
 
-            sr = new StreamReader(@"cstrike\addons\amxmodx\configs\weapons.lst", Encoding.Default);
-            while ((line = sr.ReadLine()) != null)
+            var data = new StreamReader(@"cstrike\addons\amxmodx\configs\weapons.lst").ReadToEnd();
+            foreach (var line in data.Replace("\r", string.Empty).Split('\n'))
             {
-                if (line == "")
-                    continue;
-
-                string head = line.Substring(0, 1);
-
-                if (head == ";")
-                    continue;
-
-                //Add(line);
-                Add(line);
+                if (!string.IsNullOrEmpty(line))
+                {
+                    var head = line[0];
+                    if (head != ';')
+                        Add(line);
+                }
             }
-
-            sr.Close();
 
             ResumeLayout(false);
 
@@ -204,6 +192,7 @@ namespace WeaponEditor
 
             // picture path
             string img = @"wpnpic\" + name + ".png";
+            var weaponLabel = Launcher["Weapons"][name.ToUpper()];
 
             WeaponButton add = new WeaponButton
             {
@@ -213,19 +202,19 @@ namespace WeaponEditor
                 Size = new Size(235, 102),
                 AutoSize = false,
                 WeaponName = name,
-                Image = File.Exists(img) ? Image.FromFile(img) : null
+                Image = File.Exists(img) ? Image.FromFile(img) : null,
+                WeaponText = weaponLabel ?? name,
             };
-
-            var weaponLabel = Launcher["Weapons"][name.ToUpper()];
-            weaponLabel = weaponLabel ?? name;
-            add.WeaponText = weaponLabel;
 
             add.Click += Add_Click;
 
             foreach (string mywpn in myWpn)
             {
                 if (mywpn == name)
+                {
                     add.Checked = true;
+                    break;
+                }
             }
 
             WeaponsPanel.Controls.Add(add);
@@ -256,23 +245,20 @@ namespace WeaponEditor
 
         private void ButtonAll_Click(object sender, EventArgs e)
         {
+            totalMyWpn = 0;
+            
             foreach (WeaponButton btn in buttonWpn)
             {
                 btn.Checked = true;
+                totalMyWpn++;
             }
 
-            totalMyWpn = 0;
             FormatTotalWeapon();
         }
 
         private void ButtonAbout_Click(object sender, EventArgs e)
         {
             aForm.Show();
-        }
-
-        private void ButtonReset_Click(object sender, EventArgs e)
-        {
-            LoadList("weapons_precache");
         }
     }
 }

@@ -141,7 +141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;WeaponsPanel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="SeletedAmount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -168,7 +168,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;SeletedAmount.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="ButtonAbout.Location" type="System.Drawing.Point, System.Drawing">
     <value>749, 17</value>
@@ -192,7 +192,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ButtonAbout.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="ButtonClear.Location" type="System.Drawing.Point, System.Drawing">
     <value>657, 17</value>
@@ -216,7 +216,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ButtonClear.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="ButtonAll.Location" type="System.Drawing.Point, System.Drawing">
     <value>611, 17</value>
@@ -240,30 +240,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ButtonAll.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ButtonReset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 17</value>
-  </data>
-  <data name="ButtonReset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 40</value>
-  </data>
-  <data name="ButtonReset.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="ButtonReset.Text" xml:space="preserve">
-    <value>Reset</value>
-  </data>
-  <data name="&gt;&gt;ButtonReset.Name" xml:space="preserve">
-    <value>ButtonReset</value>
-  </data>
-  <data name="&gt;&gt;ButtonReset.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.4.1.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;ButtonReset.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ButtonReset.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
