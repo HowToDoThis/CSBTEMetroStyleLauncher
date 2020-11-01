@@ -46,6 +46,7 @@
             this.CloseButton.Text = "Close";
             this.CloseButton.UseCustomBackColor = true;
             this.CloseButton.UseSelectable = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // Title
             // 

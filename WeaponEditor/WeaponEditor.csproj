@@ -38,9 +38,6 @@
     <ApplicationIcon>game.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="INIFileParser">
-      <HintPath>..\lib\INIFileParser.dll</HintPath>
-    </Reference>
     <Reference Include="MetroFramework">
       <HintPath>..\lib\MetroFramework.dll</HintPath>
     </Reference>
@@ -49,6 +46,9 @@
     </Reference>
     <Reference Include="MetroFramework.Fonts">
       <HintPath>..\lib\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Pfim, Version=0.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pfim.0.9.1\lib\netstandard2.0\Pfim.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -73,6 +73,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NSTFileParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WeaponButton.cs">
@@ -95,6 +96,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

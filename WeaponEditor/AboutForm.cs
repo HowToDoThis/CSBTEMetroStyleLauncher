@@ -16,5 +16,10 @@ namespace WeaponEditor
         {
             InitializeComponent();
         }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
