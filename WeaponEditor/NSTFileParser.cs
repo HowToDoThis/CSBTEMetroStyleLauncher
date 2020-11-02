@@ -29,7 +29,7 @@ namespace WeaponEditor
                         Dictionary<string, string> values = new Dictionary<string, string>();
 
                         // fix a weird buggy...
-                        var keyvalue = line.Replace(']', '_').Replace("_", " ").Replace('[', '\0').Split('\0');
+                        var keyvalue = line.Replace(']', ' ').Replace('[', '\0').Split('\0');
                         string name = string.Empty;
 
                         // loop line for parsing data
