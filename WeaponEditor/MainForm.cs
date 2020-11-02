@@ -1,19 +1,17 @@
 ﻿using MetroFramework.Forms;
-using Pfim;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Windows.Forms;
 
 namespace WeaponEditor
 {
     public partial class MainForm : MetroForm
     {
-        private readonly string localizedLauncherPath;
+        //private readonly string localizedLauncherPath;
         private string curSelectFormat;
 
         //private static readonly FileIniDataParser parser = new FileIniDataParser();
@@ -82,75 +80,31 @@ namespace WeaponEditor
             {
                 if (btn.Checked)
                 {
-                    string wpnName = (string)btn.Tag;
-                    // get name and add to section...
-                    switch (wpnName)
+                    string iType = (string)btn.Tag;
+                    switch (iType)
                     {
-                        // Grenade
-                        case "cake3":
-                        case "heartbomb":
-                        case "pumpkin":
-                        case "mooncake":
-                        case "holybomb":
-                            gre += $"{wpnName}, ";
-                            break;
-
-                        // MELEE
-                        case "dragontail":
-                        case "skullaxe":
-                        case "dualsword":
-                        case "summonknife":
-                        case "y20s1sword":
-                            kni += $"{wpnName}, ";
+                        // PRIMARY
+                        case "0":
+                            pri += $"{btn.WeaponName}, ";
                             break;
 
                         // SECONDARY
-                        case "usp":
-                        case "anaconda":
-                        case "infinitysr":
-                        case "luger_sliver":
-                        case "m79_gold":
-                        case "voidpistol":
-                        case "gunkata":
-                            sec += $"{wpnName}, ";
+                        case "1":
+                            sec += $"{btn.WeaponName}, ";
                             break;
 
-                        // PRIMARY
-                        case "ak47_60r":
-                        case "lockongun":
-                        case "y20s2scard":
-                        case "laserfist":
-                        case "magicsg":
-                        case "pianogun":
-                        case "svdex":
-                        case "at4ex":
-                        case "cartblue":
-                        case "cartred":
-                        case "m134_xmas":
-                        case "m134ex":
-                        case "m1887_gold":
-                        case "m249ex":
-                        case "m95":
-                        case "mg3_xmas":
-                        case "mp5_tiger":
-                        case "p90":
-                        case "sfgun":
-                        case "sfsmg":
-                        case "skull5":
-                        case "sl8_gold":
-                        case "sl8ex":
-                        case "tar21":
-                        case "thompson":
-                        case "trg42_gold":
-                        case "wa2000_gold":
-                        case "watergun":
-                        case "xm1014":
-                        case "xm2010":
-                            pri += $"{wpnName}, ";
+                        // MELEE
+                        case "2":
+                            kni += $"{btn.WeaponName}, ";
+                            break;
+
+                        // Grenade
+                        case "3":
+                            gre += $"{btn.WeaponName}, ";
                             break;
 
                         default:
-                            errmsg += $"{wpnName}, ";
+                            errmsg += $"{btn.WeaponName}, ";
                             break;
                     }
                 }
@@ -180,27 +134,6 @@ namespace WeaponEditor
 
             sw.Flush();
             sw.Close();
-
-            /*
-            string path = @"cstrike\addons\amxmodx\configs\weapons_precache.lst";
-
-            if (File.Exists(path))
-                File.Delete(path);
-
-            FileStream fs = new FileStream(path, FileMode.Create);
-            StreamWriter sw = new StreamWriter(fs);
-
-            sw.WriteLine("true");
-
-            foreach (WeaponButton btn in buttonWpn)
-            {
-                if (btn.Checked)
-                    sw.WriteLine(btn.WeaponName);
-            }
-
-            sw.Flush();
-            sw.Close();
-            */
         }
 
         /*
@@ -244,12 +177,6 @@ namespace WeaponEditor
         private void LoadSetting()
         {
             Weapon = new NSTFileParser("cstrike/addons/amxmodx/configs/liuchengsima.ini");
-
-            //Weapon = TryCatch(@"cstrike\weapons.ini");
-            //Launcher = TryCatch(localizedLauncherPath);
-
-            //if (!File.Exists(@"cstrike\addons\amxmodx\configs\weapons_precache.default.lst"))
-                //File.Copy(@"cstrike\addons\amxmodx\configs\weapons_precache.lst", @"cstrike\addons\amxmodx\configs\weapons_precache.default.lst");
         }
 
         private void FormatTotalWeapon()
@@ -339,12 +266,12 @@ namespace WeaponEditor
 
             // picture path
             // TODO: Fix
-            string img = @"wpnpic\" + mName + ".tga";
+            string img = @"cstrike/gfx/egg/" + mName + ".tga";
 
             if (!File.Exists(img))
-                img = @"wpnpic\" + mName + ".png";
+                img = @"cstrike/gfx/egg/" + mName + ".png";
             if (!File.Exists(img))
-                img = @"wpnpic\" + mName + ".jpg";
+                img = @"cstrike/gfx/egg/" + mName + ".jpg";
 
             Image bitmap = null;
 
@@ -415,8 +342,8 @@ namespace WeaponEditor
                 Text = "",
                 Size = new Size(235, 102),
                 AutoSize = false,
-                WeaponName = name,
-                Tag = mName,
+                WeaponName = mName,
+                Tag = Weapon.Keys[name]["iType"],
                 Image = bitmap
             };
 
