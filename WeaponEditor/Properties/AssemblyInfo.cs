@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MetroStyleWeaponEditor")]
-[assembly: AssemblyDescription("This is a External Launcher For Starting Up CS.  It's Custom Made For CS:SME, CS:BTE, CS:BTE-RSJ, CS:BTE-Banana Or More Version")]
+[assembly: AssemblyTitle("AvDWeaponEditor")]
+[assembly: AssemblyDescription("Fork of Metro Style Weapon Editor. By NekoMeow")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NekoMeow")]
-[assembly: AssemblyProduct("MetroStyleWeaponEditor")]
-[assembly: AssemblyCopyright("Copyright ©  2019 Neko Meow. All Rights Reserved.")]
+[assembly: AssemblyProduct("AvDWeaponEditor")]
+[assembly: AssemblyCopyright("Copyright ©  2019-2020 Neko Meow. All Rights Reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

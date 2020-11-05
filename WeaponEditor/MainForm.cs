@@ -11,28 +11,12 @@ namespace WeaponEditor
 {
     public partial class MainForm : MetroForm
     {
-        //private readonly string localizedLauncherPath;
         private string curSelectFormat;
 
-        //private static readonly FileIniDataParser parser = new FileIniDataParser();
-        //private static FileIniDataParser parser = new FileIniDataParser(iniDataParser);
-        //private static readonly IniDataParser iniDataParser = new IniDataParser();
-
-        //private IniData Weapon;
-        //private IniData Launcher;
-        private readonly Main aForm = new Main();
-
+        #region Form
         public MainForm()
         {
             string[] args = Environment.GetCommandLineArgs();
-
-            /*
-            if (args.Contains("AllowDuplicate"))
-            {
-                parser.Parser.Configuration.AllowDuplicateSections = true;
-                parser.Parser.Configuration.AllowDuplicateKeys = true;
-            }
-            */
 
             InitializeComponent();
             LoadSetting();
@@ -48,12 +32,13 @@ namespace WeaponEditor
         {
             SaveList();
         }
+        #endregion
 
         private void SaveList()
         {
-            StreamWriter sw = null;
             string path = @"cstrike/addons/amxmodx/configs/LCSMMyWpn.ini";
 
+            StreamWriter sw;
             if (!File.Exists(path))
             {
                 sw = new StreamWriter(File.Create(path));
@@ -135,41 +120,6 @@ namespace WeaponEditor
             sw.Flush();
             sw.Close();
         }
-
-        /*
-        // https://stackoverflow.com/questions/3825390/effective-way-to-find-any-files-encoding
-        // Thanks To 2Toad
-        // Based on This Code and Modify
-        private static Encoding GetEncoding(string path)
-        {
-            // First Read File
-            var bom = new byte[4];
-            using (var file = new FileStream(path, FileMode.Open, FileAccess.Read))
-            {
-                file.Read(bom, 0, 4);
-            }
-
-            if (bom[0] == 0xef && bom[1] == 0xbb && bom[2] == 0xbf)
-                return Encoding.UTF8;
-            else
-                return Encoding.Default;
-        }
-
-        private IniData TryCatch(string path)
-        {
-            try
-            {
-                parser.ReadFile(path, GetEncoding(path));
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, path);
-                Environment.Exit(-1);
-            }
-
-            return parser.ReadFile(path, GetEncoding(path));
-        }
-        */
 
         // Because Egg using NST Style, Need Fix This
         NSTFileParser Weapon;
@@ -258,6 +208,16 @@ namespace WeaponEditor
             catch
             {
                 MessageBox.Show("武器 : " + name + " 缺少购买信息, 请添加[buy]1来修复此问题", "武器 : " + name);
+                Close();
+            }
+
+            try
+            {
+                var test = Weapon.Keys[name]["iType"];
+            }
+            catch
+            {
+                MessageBox.Show("武器 : " + name + " 缺少类型信息, 请添加[iType]x来修复此问题\nx为号码0-4", "武器 : " + name);
                 Close();
             }
 
@@ -352,10 +312,11 @@ namespace WeaponEditor
 
             foreach (string mywpn in myWpn)
             {
-                if (mywpn == (string)add.Tag)
+                if (mywpn == add.WeaponName)
                 {
+                    // Fix this method...
                     add.Checked = true;
-                    break; // Fix this method...
+                    break;
                 }
             }
 
@@ -373,7 +334,7 @@ namespace WeaponEditor
             FormatTotalWeapon();
         }
 
-        // Other Function
+        #region Other Function
         private void ButtonClear_Click(object sender, EventArgs e)
         {
             foreach (WeaponButton btn in buttonWpn)
@@ -397,10 +358,6 @@ namespace WeaponEditor
 
             FormatTotalWeapon();
         }
-
-        private void ButtonAbout_Click(object sender, EventArgs e)
-        {
-            aForm.Show();
-        }
+        #endregion
     }
 }

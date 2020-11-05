@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.WeaponsPanel = new MetroFramework.Controls.MetroPanel();
             this.SeletedAmount = new MetroFramework.Controls.MetroLabel();
-            this.ButtonAbout = new MetroFramework.Controls.MetroButton();
             this.ButtonClear = new MetroFramework.Controls.MetroButton();
             this.ButtonAll = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
@@ -53,15 +52,6 @@
             // 
             resources.ApplyResources(this.SeletedAmount, "SeletedAmount");
             this.SeletedAmount.Name = "SeletedAmount";
-            // 
-            // ButtonAbout
-            // 
-            this.ButtonAbout.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            resources.ApplyResources(this.ButtonAbout, "ButtonAbout");
-            this.ButtonAbout.Name = "ButtonAbout";
-            this.ButtonAbout.UseCustomBackColor = true;
-            this.ButtonAbout.UseSelectable = true;
-            this.ButtonAbout.Click += new System.EventHandler(this.ButtonAbout_Click);
             // 
             // ButtonClear
             // 
@@ -87,7 +77,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ButtonAll);
             this.Controls.Add(this.ButtonClear);
-            this.Controls.Add(this.ButtonAbout);
             this.Controls.Add(this.SeletedAmount);
             this.Controls.Add(this.WeaponsPanel);
             this.MaximizeBox = false;
@@ -104,7 +93,6 @@
 
         private MetroFramework.Controls.MetroPanel WeaponsPanel;
         private MetroFramework.Controls.MetroLabel SeletedAmount;
-        private MetroFramework.Controls.MetroButton ButtonAbout;
         private MetroFramework.Controls.MetroButton ButtonClear;
         private MetroFramework.Controls.MetroButton ButtonAll;
     }
