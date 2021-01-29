@@ -37,6 +37,7 @@ namespace WeaponEditor
         private void SaveList()
         {
             string path = @"cstrike/addons/amxmodx/configs/LCSMMyWpn.ini";
+            string plugins = @"cstrike/addons/amxmodx/configs/plugins-egg.ini";
 
             StreamWriter sw;
             if (!File.Exists(path))
@@ -58,6 +59,9 @@ namespace WeaponEditor
             string kni = "MELEE = ";
             string gre = "GRENADE = ";
 
+            // for plugins-egg
+            string ini = string.Empty;
+
             // And error msg... if got?
             string errmsg = string.Empty;
 
@@ -65,6 +69,16 @@ namespace WeaponEditor
             {
                 if (btn.Checked)
                 {
+                    // check first
+                    foreach (var plName in PluginsWeapon)
+                    {
+                        if (btn.WeaponName.Contains(plName))
+                        {
+                            ini += $"egg_{plName}.amxx\n";
+                            break;
+                        }
+                    }
+
                     string iType = (string)btn.Tag;
                     switch (iType)
                     {
@@ -106,7 +120,6 @@ namespace WeaponEditor
             // delete file.
             File.Delete(path);
 
-
             int pos = data.IndexOf("PRIMARY");
             var header = data.Remove(pos);
             sw = new StreamWriter(File.OpenWrite(path));
@@ -119,14 +132,55 @@ namespace WeaponEditor
 
             sw.Flush();
             sw.Close();
+
+            // Write plugins-egg.ini
+            sw = new StreamWriter(File.OpenWrite(plugins));
+            sw.Write(ini);
+            sw.Flush();
+            sw.Close();
         }
 
         // Because Egg using NST Style, Need Fix This
         NSTFileParser Weapon;
+        List<string> PluginsWeapon = new List<string>();
 
         private void LoadSetting()
         {
             Weapon = new NSTFileParser("cstrike/addons/amxmodx/configs/liuchengsima.ini");
+
+            // load plugins-ini?
+            string line;
+            string fileName = @"cstrike/addons/amxmodx/configs/eggweapon.lst";
+            if (File.Exists(fileName))
+            {
+                var sr = new StreamReader(File.OpenRead(fileName));
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if (!string.IsNullOrEmpty(line))
+                    {
+                        if (line.StartsWith("#") || line.StartsWith("//"))
+                            continue;
+
+                        if (line.EndsWith(".amxx"))
+                        {
+                            // first thing first, remove ; or any special icons ?
+                            var data = line.Replace(";", string.Empty).Replace("egg_", string.Empty).Replace(".amxx", string.Empty);
+                            // now data only has patroldrone, dualsword etc
+                            if (!string.IsNullOrEmpty(data))
+                            {
+                                // skip banned words?
+                                if (data.Contains("gungnir"))
+                                    continue;
+
+                                PluginsWeapon.Add(data);
+                            }
+                        }
+                    }
+                }
+
+                sr.Close();
+            }
         }
 
         private void FormatTotalWeapon()
@@ -158,7 +212,11 @@ namespace WeaponEditor
                 {
                     if (!string.IsNullOrEmpty(line))
                     {
-                        if (line.Contains("PRIMARY") || line.Contains("SECONDARY") || line.Contains("MELEE") || line.Contains("GRENADE"))
+                        if (line.StartsWith("#") || line.StartsWith("//"))
+                            continue;
+
+                        if (line.Contains("PRIMARY") || line.Contains("SECONDARY") ||
+                            line.Contains("MELEE") || line.Contains("GRENADE"))
                         {
                             // xxx = xxxx
                             //     ^ ^
@@ -181,13 +239,44 @@ namespace WeaponEditor
                 sr.Close();
             }
 
+            fileName = @"cstrike/addons/amxmodx/configs/plugins-egg.ini";
+            if (File.Exists(fileName))
+            {
+                sr = new StreamReader(File.OpenRead(fileName));
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if (!string.IsNullOrEmpty(line))
+                    {
+                        if (line.StartsWith("#") || line.StartsWith("//"))
+                            continue;
+
+                        if (line.EndsWith(".amxx"))
+                        {
+                            // first thing first, remove ; or any special icons ?
+                            var data = line.Replace("egg_", string.Empty).Replace(".amxx", string.Empty);
+                            // now data only has patroldrone, dualsword etc
+                            if (!string.IsNullOrEmpty(data))
+                            {
+                                // skip banned words?
+                                if (data.Contains("gungnir") ||
+                                    data.StartsWith(";"))
+                                    continue;
+
+                                myWpn.Add(data);
+                            }
+                        }
+                    }
+                }
+
+                sr.Close();
+            }
+
             // load all weapon
             SuspendLayout();
 
             foreach (var key in Weapon.Keys)
-            {
                 Add(key.Key);
-            }
 
             // Set Checked at here
 
@@ -297,7 +386,7 @@ namespace WeaponEditor
 
             WeaponButton add = new WeaponButton
             {
-                Location = new Point(24 + 255 * (totalWeapons % 3), 24 + 126 * (totalWeapons / 3)),
+                Location = new Point(24 + (255 * (totalWeapons % 3)), 24 + (126 * (totalWeapons / 3))),
                 Name = "btnAdd",
                 Text = "",
                 Size = new Size(235, 102),

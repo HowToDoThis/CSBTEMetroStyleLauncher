@@ -336,7 +336,7 @@ namespace Launcher
             btnAdd.FontWeight = MetroButtonWeight.Regular;
 
             PanelModes.Controls.Add(btnAdd);
-            btnAdd.Location = new System.Drawing.Point(PanelModes.Size.Width - btnAdd.Size.Width - 24, totalModes * 38 + 8);
+            btnAdd.Location = new System.Drawing.Point(PanelModes.Size.Width - btnAdd.Size.Width - 24, (totalModes * 38) + 8);
 
             totalModes++;
         }
@@ -405,7 +405,7 @@ namespace Launcher
             var label = Launcher["Maps"][name]; label = label == null ? name : label;
 
             MetroButton btnAdd = new MetroButton();
-            btnAdd.Location = new System.Drawing.Point(totalMaps / 7 * width + 28, totalMaps % 7 * 38 + 25);
+            btnAdd.Location = new System.Drawing.Point((totalMaps / 7 * width) + 28, (totalMaps % 7 * 38) + 25);
             btnAdd.Name = "btnAdd";
             btnAdd.TabIndex = 0;
             btnAdd.Text = label;
@@ -450,7 +450,7 @@ namespace Launcher
             {
                 radioButtonBotDiff[i] = new MetroRadioButton();
 
-                radioButtonBotDiff[i].Location = new System.Drawing.Point(0, 0 + 30 * i);
+                radioButtonBotDiff[i].Location = new System.Drawing.Point(0, 0 + (30 * i));
                 radioButtonBotDiff[i].Name = "btnAdd";
                 radioButtonBotDiff[i].TabIndex = i;
                 radioButtonBotDiff[i].Text = BotDifficulty[i];
