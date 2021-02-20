@@ -38,9 +38,6 @@
     <ApplicationIcon>game.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="INIFileParser">
-      <HintPath>..\lib\INIFileParser.dll</HintPath>
-    </Reference>
     <Reference Include="MetroFramework">
       <HintPath>..\lib\MetroFramework.dll</HintPath>
     </Reference>

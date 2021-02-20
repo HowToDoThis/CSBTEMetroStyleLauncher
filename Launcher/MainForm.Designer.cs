@@ -30,20 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.TabControl = new MetroFramework.Controls.MetroTabControl();
-            this.PageHome = new MetroFramework.Controls.MetroTabPage();
-            this.LaunchEditor = new MetroFramework.Controls.MetroButton();
-            this.NewEditor = new MetroFramework.Controls.MetroCheckBox();
-            this.OldEditor = new MetroFramework.Controls.MetroCheckBox();
-            this.PanelModes = new MetroFramework.Controls.MetroPanel();
-            this.LaunchGame = new MetroFramework.Controls.MetroButton();
-            this.Divider2 = new MetroFramework.Controls.MetroLabel();
-            this.Divider1 = new MetroFramework.Controls.MetroLabel();
-            this.HomeBot = new MetroFramework.Controls.MetroLabel();
-            this.HomeMap = new MetroFramework.Controls.MetroLabel();
-            this.HomeMode = new MetroFramework.Controls.MetroLabel();
-            this.TitleBot = new MetroFramework.Controls.MetroLabel();
-            this.TitleMap = new MetroFramework.Controls.MetroLabel();
-            this.TitleMode = new MetroFramework.Controls.MetroLabel();
             this.PageMap = new MetroFramework.Controls.MetroTabPage();
             this.PanelMaps = new MetroFramework.Controls.MetroPanel();
             this.PageBot = new MetroFramework.Controls.MetroTabPage();
@@ -93,8 +79,21 @@
             this.AboutIni = new MetroFramework.Controls.MetroLabel();
             this.AboutMetro = new MetroFramework.Controls.MetroLabel();
             this.AboutThanks = new MetroFramework.Controls.MetroLabel();
+            this.TitleMode = new MetroFramework.Controls.MetroLabel();
+            this.TitleMap = new MetroFramework.Controls.MetroLabel();
+            this.TitleBot = new MetroFramework.Controls.MetroLabel();
+            this.HomeMode = new MetroFramework.Controls.MetroLabel();
+            this.HomeMap = new MetroFramework.Controls.MetroLabel();
+            this.HomeBot = new MetroFramework.Controls.MetroLabel();
+            this.Divider1 = new MetroFramework.Controls.MetroLabel();
+            this.Divider2 = new MetroFramework.Controls.MetroLabel();
+            this.LaunchGame = new MetroFramework.Controls.MetroButton();
+            this.PanelModes = new MetroFramework.Controls.MetroPanel();
+            this.OldEditor = new MetroFramework.Controls.MetroCheckBox();
+            this.NewEditor = new MetroFramework.Controls.MetroCheckBox();
+            this.LaunchEditor = new MetroFramework.Controls.MetroButton();
+            this.PageHome = new MetroFramework.Controls.MetroTabPage();
             this.TabControl.SuspendLayout();
-            this.PageHome.SuspendLayout();
             this.PageMap.SuspendLayout();
             this.PageBot.SuspendLayout();
             this.PageVideo.SuspendLayout();
@@ -103,6 +102,7 @@
             this.PanelAA.SuspendLayout();
             this.PageOther.SuspendLayout();
             this.PageAbout.SuspendLayout();
+            this.PageHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControl
@@ -117,134 +117,6 @@
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
             this.TabControl.UseSelectable = true;
-            // 
-            // PageHome
-            // 
-            this.PageHome.Controls.Add(this.LaunchEditor);
-            this.PageHome.Controls.Add(this.NewEditor);
-            this.PageHome.Controls.Add(this.OldEditor);
-            this.PageHome.Controls.Add(this.PanelModes);
-            this.PageHome.Controls.Add(this.LaunchGame);
-            this.PageHome.Controls.Add(this.Divider2);
-            this.PageHome.Controls.Add(this.Divider1);
-            this.PageHome.Controls.Add(this.HomeBot);
-            this.PageHome.Controls.Add(this.HomeMap);
-            this.PageHome.Controls.Add(this.HomeMode);
-            this.PageHome.Controls.Add(this.TitleBot);
-            this.PageHome.Controls.Add(this.TitleMap);
-            this.PageHome.Controls.Add(this.TitleMode);
-            this.PageHome.HorizontalScrollbarBarColor = true;
-            this.PageHome.HorizontalScrollbarHighlightOnWheel = false;
-            this.PageHome.HorizontalScrollbarSize = 10;
-            resources.ApplyResources(this.PageHome, "PageHome");
-            this.PageHome.Name = "PageHome";
-            this.PageHome.VerticalScrollbarBarColor = true;
-            this.PageHome.VerticalScrollbarHighlightOnWheel = false;
-            this.PageHome.VerticalScrollbarSize = 10;
-            // 
-            // LaunchEditor
-            // 
-            this.LaunchEditor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            resources.ApplyResources(this.LaunchEditor, "LaunchEditor");
-            this.LaunchEditor.Name = "LaunchEditor";
-            this.LaunchEditor.UseCustomBackColor = true;
-            this.LaunchEditor.UseSelectable = true;
-            this.LaunchEditor.UseStyleColors = true;
-            this.LaunchEditor.Click += new System.EventHandler(this.LaunchEditor_Click);
-            // 
-            // NewEditor
-            // 
-            resources.ApplyResources(this.NewEditor, "NewEditor");
-            this.NewEditor.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
-            this.NewEditor.Name = "NewEditor";
-            this.NewEditor.UseSelectable = true;
-            this.NewEditor.CheckedChanged += new System.EventHandler(this.NewEditor_CheckedChanged);
-            // 
-            // OldEditor
-            // 
-            resources.ApplyResources(this.OldEditor, "OldEditor");
-            this.OldEditor.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
-            this.OldEditor.Name = "OldEditor";
-            this.OldEditor.UseSelectable = true;
-            this.OldEditor.CheckedChanged += new System.EventHandler(this.OldEditor_CheckedChanged);
-            // 
-            // PanelModes
-            // 
-            resources.ApplyResources(this.PanelModes, "PanelModes");
-            this.PanelModes.HorizontalScrollbar = true;
-            this.PanelModes.HorizontalScrollbarBarColor = true;
-            this.PanelModes.HorizontalScrollbarHighlightOnWheel = false;
-            this.PanelModes.HorizontalScrollbarSize = 5;
-            this.PanelModes.Name = "PanelModes";
-            this.PanelModes.VerticalScrollbar = true;
-            this.PanelModes.VerticalScrollbarBarColor = true;
-            this.PanelModes.VerticalScrollbarHighlightOnWheel = false;
-            this.PanelModes.VerticalScrollbarSize = 5;
-            // 
-            // LaunchGame
-            // 
-            this.LaunchGame.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            resources.ApplyResources(this.LaunchGame, "LaunchGame");
-            this.LaunchGame.Name = "LaunchGame";
-            this.LaunchGame.UseCustomBackColor = true;
-            this.LaunchGame.UseSelectable = true;
-            this.LaunchGame.UseStyleColors = true;
-            this.LaunchGame.Click += new System.EventHandler(this.LaunchGame_Click);
-            // 
-            // Divider2
-            // 
-            this.Divider2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Divider2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            resources.ApplyResources(this.Divider2, "Divider2");
-            this.Divider2.Name = "Divider2";
-            // 
-            // Divider1
-            // 
-            this.Divider1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Divider1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            resources.ApplyResources(this.Divider1, "Divider1");
-            this.Divider1.Name = "Divider1";
-            // 
-            // HomeBot
-            // 
-            resources.ApplyResources(this.HomeBot, "HomeBot");
-            this.HomeBot.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.HomeBot.Name = "HomeBot";
-            this.HomeBot.Click += new System.EventHandler(this.HomeBot_Click);
-            // 
-            // HomeMap
-            // 
-            resources.ApplyResources(this.HomeMap, "HomeMap");
-            this.HomeMap.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.HomeMap.Name = "HomeMap";
-            this.HomeMap.Click += new System.EventHandler(this.HomeMap_Click);
-            // 
-            // HomeMode
-            // 
-            resources.ApplyResources(this.HomeMode, "HomeMode");
-            this.HomeMode.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.HomeMode.Name = "HomeMode";
-            // 
-            // TitleBot
-            // 
-            resources.ApplyResources(this.TitleBot, "TitleBot");
-            this.TitleBot.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.TitleBot.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.TitleBot.Name = "TitleBot";
-            // 
-            // TitleMap
-            // 
-            resources.ApplyResources(this.TitleMap, "TitleMap");
-            this.TitleMap.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.TitleMap.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.TitleMap.Name = "TitleMap";
-            // 
-            // TitleMode
-            // 
-            resources.ApplyResources(this.TitleMode, "TitleMode");
-            this.TitleMode.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.TitleMode.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.TitleMode.Name = "TitleMode";
             // 
             // PageMap
             // 
@@ -739,6 +611,134 @@
             this.AboutThanks.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.AboutThanks.Name = "AboutThanks";
             // 
+            // TitleMode
+            // 
+            resources.ApplyResources(this.TitleMode, "TitleMode");
+            this.TitleMode.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.TitleMode.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.TitleMode.Name = "TitleMode";
+            // 
+            // TitleMap
+            // 
+            resources.ApplyResources(this.TitleMap, "TitleMap");
+            this.TitleMap.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.TitleMap.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.TitleMap.Name = "TitleMap";
+            // 
+            // TitleBot
+            // 
+            resources.ApplyResources(this.TitleBot, "TitleBot");
+            this.TitleBot.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.TitleBot.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.TitleBot.Name = "TitleBot";
+            // 
+            // HomeMode
+            // 
+            resources.ApplyResources(this.HomeMode, "HomeMode");
+            this.HomeMode.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.HomeMode.Name = "HomeMode";
+            // 
+            // HomeMap
+            // 
+            resources.ApplyResources(this.HomeMap, "HomeMap");
+            this.HomeMap.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.HomeMap.Name = "HomeMap";
+            this.HomeMap.Click += new System.EventHandler(this.HomeMap_Click);
+            // 
+            // HomeBot
+            // 
+            resources.ApplyResources(this.HomeBot, "HomeBot");
+            this.HomeBot.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.HomeBot.Name = "HomeBot";
+            this.HomeBot.Click += new System.EventHandler(this.HomeBot_Click);
+            // 
+            // Divider1
+            // 
+            this.Divider1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Divider1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            resources.ApplyResources(this.Divider1, "Divider1");
+            this.Divider1.Name = "Divider1";
+            // 
+            // Divider2
+            // 
+            this.Divider2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Divider2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            resources.ApplyResources(this.Divider2, "Divider2");
+            this.Divider2.Name = "Divider2";
+            // 
+            // LaunchGame
+            // 
+            this.LaunchGame.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            resources.ApplyResources(this.LaunchGame, "LaunchGame");
+            this.LaunchGame.Name = "LaunchGame";
+            this.LaunchGame.UseCustomBackColor = true;
+            this.LaunchGame.UseSelectable = true;
+            this.LaunchGame.UseStyleColors = true;
+            this.LaunchGame.Click += new System.EventHandler(this.LaunchGame_Click);
+            // 
+            // PanelModes
+            // 
+            resources.ApplyResources(this.PanelModes, "PanelModes");
+            this.PanelModes.HorizontalScrollbar = true;
+            this.PanelModes.HorizontalScrollbarBarColor = true;
+            this.PanelModes.HorizontalScrollbarHighlightOnWheel = false;
+            this.PanelModes.HorizontalScrollbarSize = 5;
+            this.PanelModes.Name = "PanelModes";
+            this.PanelModes.VerticalScrollbar = true;
+            this.PanelModes.VerticalScrollbarBarColor = true;
+            this.PanelModes.VerticalScrollbarHighlightOnWheel = false;
+            this.PanelModes.VerticalScrollbarSize = 5;
+            // 
+            // OldEditor
+            // 
+            resources.ApplyResources(this.OldEditor, "OldEditor");
+            this.OldEditor.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
+            this.OldEditor.Name = "OldEditor";
+            this.OldEditor.UseSelectable = true;
+            this.OldEditor.CheckedChanged += new System.EventHandler(this.OldEditor_CheckedChanged);
+            // 
+            // NewEditor
+            // 
+            resources.ApplyResources(this.NewEditor, "NewEditor");
+            this.NewEditor.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
+            this.NewEditor.Name = "NewEditor";
+            this.NewEditor.UseSelectable = true;
+            this.NewEditor.CheckedChanged += new System.EventHandler(this.NewEditor_CheckedChanged);
+            // 
+            // LaunchEditor
+            // 
+            this.LaunchEditor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            resources.ApplyResources(this.LaunchEditor, "LaunchEditor");
+            this.LaunchEditor.Name = "LaunchEditor";
+            this.LaunchEditor.UseCustomBackColor = true;
+            this.LaunchEditor.UseSelectable = true;
+            this.LaunchEditor.UseStyleColors = true;
+            this.LaunchEditor.Click += new System.EventHandler(this.LaunchEditor_Click);
+            // 
+            // PageHome
+            // 
+            this.PageHome.Controls.Add(this.LaunchEditor);
+            this.PageHome.Controls.Add(this.NewEditor);
+            this.PageHome.Controls.Add(this.OldEditor);
+            this.PageHome.Controls.Add(this.PanelModes);
+            this.PageHome.Controls.Add(this.LaunchGame);
+            this.PageHome.Controls.Add(this.Divider2);
+            this.PageHome.Controls.Add(this.Divider1);
+            this.PageHome.Controls.Add(this.HomeBot);
+            this.PageHome.Controls.Add(this.HomeMap);
+            this.PageHome.Controls.Add(this.HomeMode);
+            this.PageHome.Controls.Add(this.TitleBot);
+            this.PageHome.Controls.Add(this.TitleMap);
+            this.PageHome.Controls.Add(this.TitleMode);
+            this.PageHome.HorizontalScrollbarBarColor = true;
+            this.PageHome.HorizontalScrollbarHighlightOnWheel = false;
+            this.PageHome.HorizontalScrollbarSize = 10;
+            resources.ApplyResources(this.PageHome, "PageHome");
+            this.PageHome.Name = "PageHome";
+            this.PageHome.VerticalScrollbarBarColor = true;
+            this.PageHome.VerticalScrollbarHighlightOnWheel = false;
+            this.PageHome.VerticalScrollbarSize = 10;
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
@@ -750,8 +750,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.TabControl.ResumeLayout(false);
-            this.PageHome.ResumeLayout(false);
-            this.PageHome.PerformLayout();
             this.PageMap.ResumeLayout(false);
             this.PageBot.ResumeLayout(false);
             this.PageBot.PerformLayout();
@@ -767,6 +765,8 @@
             this.PageOther.PerformLayout();
             this.PageAbout.ResumeLayout(false);
             this.PageAbout.PerformLayout();
+            this.PageHome.ResumeLayout(false);
+            this.PageHome.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -774,21 +774,7 @@
         #endregion
 
         private MetroFramework.Controls.MetroTabControl TabControl;
-        private MetroFramework.Controls.MetroTabPage PageHome;
         private MetroFramework.Controls.MetroTabPage PageMap;
-        private MetroFramework.Controls.MetroLabel HomeBot;
-        private MetroFramework.Controls.MetroLabel HomeMap;
-        private MetroFramework.Controls.MetroLabel HomeMode;
-        private MetroFramework.Controls.MetroLabel TitleBot;
-        private MetroFramework.Controls.MetroLabel TitleMap;
-        private MetroFramework.Controls.MetroLabel TitleMode;
-        private MetroFramework.Controls.MetroLabel Divider1;
-        private MetroFramework.Controls.MetroButton LaunchGame;
-        private MetroFramework.Controls.MetroLabel Divider2;
-        private MetroFramework.Controls.MetroPanel PanelModes;
-        private MetroFramework.Controls.MetroButton LaunchEditor;
-        private MetroFramework.Controls.MetroCheckBox NewEditor;
-        private MetroFramework.Controls.MetroCheckBox OldEditor;
         private MetroFramework.Controls.MetroTabPage PageBot;
         private MetroFramework.Controls.MetroTabPage PageVideo;
         private MetroFramework.Controls.MetroTabPage PageOther;
@@ -837,6 +823,20 @@
         private MetroFramework.Controls.MetroRadioButton VideoFullScreen;
         private MetroFramework.Controls.MetroRadioButton VideoWindowed;
         private MetroFramework.Controls.MetroRadioButton VideoWindowedBorderless;
+        private MetroFramework.Controls.MetroTabPage PageHome;
+        private MetroFramework.Controls.MetroButton LaunchEditor;
+        private MetroFramework.Controls.MetroCheckBox NewEditor;
+        private MetroFramework.Controls.MetroCheckBox OldEditor;
+        private MetroFramework.Controls.MetroPanel PanelModes;
+        private MetroFramework.Controls.MetroButton LaunchGame;
+        private MetroFramework.Controls.MetroLabel Divider2;
+        private MetroFramework.Controls.MetroLabel Divider1;
+        private MetroFramework.Controls.MetroLabel HomeBot;
+        private MetroFramework.Controls.MetroLabel HomeMap;
+        private MetroFramework.Controls.MetroLabel HomeMode;
+        private MetroFramework.Controls.MetroLabel TitleBot;
+        private MetroFramework.Controls.MetroLabel TitleMap;
+        private MetroFramework.Controls.MetroLabel TitleMode;
     }
 }
 

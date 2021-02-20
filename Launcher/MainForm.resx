@@ -112,19 +112,19 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="LaunchEditor.Location" type="System.Drawing.Point, System.Drawing">
     <value>298, 275</value>
   </data>
   <data name="LaunchEditor.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 40</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LaunchEditor.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
@@ -294,13 +294,10 @@
     <value>150, 95</value>
   </data>
   <data name="HomeBot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
+    <value>0, 0</value>
   </data>
   <data name="HomeBot.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
-  </data>
-  <data name="HomeBot.Text" xml:space="preserve">
-    <value>No Data</value>
   </data>
   <data name="&gt;&gt;HomeBot.Name" xml:space="preserve">
     <value>HomeBot</value>
@@ -321,13 +318,10 @@
     <value>150, 55</value>
   </data>
   <data name="HomeMap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
+    <value>0, 0</value>
   </data>
   <data name="HomeMap.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
-  </data>
-  <data name="HomeMap.Text" xml:space="preserve">
-    <value>No Data</value>
   </data>
   <data name="&gt;&gt;HomeMap.Name" xml:space="preserve">
     <value>HomeMap</value>
@@ -348,13 +342,10 @@
     <value>150, 15</value>
   </data>
   <data name="HomeMode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
+    <value>0, 0</value>
   </data>
   <data name="HomeMode.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
-  </data>
-  <data name="HomeMode.Text" xml:space="preserve">
-    <value>No Data</value>
   </data>
   <data name="&gt;&gt;HomeMode.Name" xml:space="preserve">
     <value>HomeMode</value>
@@ -375,13 +366,10 @@
     <value>15, 95</value>
   </data>
   <data name="TitleBot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 25</value>
+    <value>0, 0</value>
   </data>
   <data name="TitleBot.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="TitleBot.Text" xml:space="preserve">
-    <value>Bot</value>
   </data>
   <data name="&gt;&gt;TitleBot.Name" xml:space="preserve">
     <value>TitleBot</value>
@@ -402,13 +390,10 @@
     <value>15, 55</value>
   </data>
   <data name="TitleMap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
+    <value>0, 0</value>
   </data>
   <data name="TitleMap.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="TitleMap.Text" xml:space="preserve">
-    <value>Map</value>
   </data>
   <data name="&gt;&gt;TitleMap.Name" xml:space="preserve">
     <value>TitleMap</value>
@@ -429,13 +414,10 @@
     <value>15, 15</value>
   </data>
   <data name="TitleMode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 25</value>
+    <value>0, 0</value>
   </data>
   <data name="TitleMode.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="TitleMode.Text" xml:space="preserve">
-    <value>Mode</value>
   </data>
   <data name="&gt;&gt;TitleMode.Name" xml:space="preserve">
     <value>TitleMode</value>
@@ -626,7 +608,7 @@
   <data name="&gt;&gt;BotZ.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="resource.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1806,14 +1788,14 @@
   <data name="&gt;&gt;TabControl.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+    <value>893, 626</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2203,11 +2185,14 @@
         AAD/4AAAAf8AAP/gAAP//wAA/+AAB///AAD/8AAH//8AAP/wAA///wAA//gAH///AAA=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>WindowsDefaultLocation</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Launcher</value>
+    <value>AvD 启动器</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>

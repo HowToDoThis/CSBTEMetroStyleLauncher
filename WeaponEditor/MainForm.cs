@@ -134,7 +134,7 @@ namespace WeaponEditor
             sw.Close();
 
             // Write plugins-egg.ini
-            sw = new StreamWriter(File.OpenWrite(plugins));
+            sw = new StreamWriter(File.Create(plugins));
             sw.Write(ini);
             sw.Flush();
             sw.Close();
@@ -185,11 +185,19 @@ namespace WeaponEditor
 
         private void FormatTotalWeapon()
         {
+            totalMyWpn = 0;
+
+            foreach (var btn in buttonWpn)
+            {
+                if (btn.Checked)
+                    totalMyWpn += 1;
+            }
+
             SeletedAmount.Text = string.Format(curSelectFormat, totalMyWpn);
         }
 
         private int totalWeapons;
-        private int totalMyWpn;
+        private int totalMyWpn = 0;
         private readonly List<WeaponButton> buttonWpn = new List<WeaponButton>();
         private readonly List<string> myWpn = new List<string>();
 
@@ -417,9 +425,6 @@ namespace WeaponEditor
 
         private void Add_Click(object sender, EventArgs e)
         {
-            WeaponButton btn = (WeaponButton)sender;
-
-            totalMyWpn += btn.Checked ? 1 : -1;
             FormatTotalWeapon();
         }
 
