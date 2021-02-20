@@ -12,6 +12,8 @@ namespace WeaponEditor
     public partial class MainForm : MetroForm
     {
         private string curSelectFormat;
+        private string amxxCfgPath = "cstrike/addons/amxmodx/configs/";
+        private bool isZombieMode = false;
 
         #region Form
         public MainForm()
@@ -20,6 +22,7 @@ namespace WeaponEditor
 
             InitializeComponent();
             LoadSetting();
+            LoadMode();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -33,6 +36,15 @@ namespace WeaponEditor
             SaveList();
         }
         #endregion
+
+        private void LoadMode()
+        {
+            // Egg said current only have zb3 and normal, so fuck it
+            if (File.Exists(amxxCfgPath + "plugins-zb3.ini"))
+                isZombieMode = true;
+            else
+                isZombieMode = false;
+        }
 
         private void SaveList()
         {
