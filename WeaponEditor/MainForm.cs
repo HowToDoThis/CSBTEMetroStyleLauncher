@@ -13,6 +13,9 @@ namespace WeaponEditor
     {
         private string curSelectFormat;
         private string amxxCfgPath = "cstrike/addons/amxmodx/configs/";
+        private string enabledCfg = "plugins-zb3.ini";
+        private string disabledCfg = "disabled-zb3.ini";
+
         private bool isZombieMode = false;
 
         #region Form
@@ -34,16 +37,34 @@ namespace WeaponEditor
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             SaveList();
+            SaveMode();
         }
         #endregion
 
         private void LoadMode()
         {
             // Egg said current only have zb3 and normal, so fuck it
-            if (File.Exists(amxxCfgPath + "plugins-zb3.ini"))
+            if (File.Exists(amxxCfgPath + enabledCfg))
                 isZombieMode = true;
             else
                 isZombieMode = false;
+        }
+
+        private void SaveMode()
+        {
+            // just read checkbutton, since Mac does not have UI to watch Windows stuff, so no choice :(
+            // isZombieMode = xxx.Checked;
+
+            // check both file
+            if (File.Exists(amxxCfgPath + enabledCfg) || File.Exists(amxxCfgPath + disabledCfg))
+            {
+                if (isZombieMode)
+                    File.Move(amxxCfgPath + disabledCfg, amxxCfgPath + enabledCfg);
+                else
+                    File.Move(amxxCfgPath + enabledCfg, amxxCfgPath + disabledCfg);
+            }
+            else
+                MessageBox.Show("僵尸3（英雄）模式文件不存在，已启动默认模式。");
         }
 
         private void SaveList()
